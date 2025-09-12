@@ -1,0 +1,12 @@
+.rectangle {
+  width: 95%;
+  min-height: 40vh;
+  stroke: white;
+  background-color: transparent;
+  border: 3px solid white;
+  box-shadow: inset 0px 0px 20px rgba(4, 225, 44, 0.8); 
+}
+
+.green{
+ box-shadow: inset 0px 0px 100px rgba(77, 255, 148, 0.4);
+}
