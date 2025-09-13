@@ -37,7 +37,7 @@ const NavigationDropdown: React.FC<NavigationDropdownProps> = ({
         <ChevronDown className="inline lg:h-8 lg:w-8 w-4 h-4 mr-[-1rem]" />
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="border-none shadow-none bg-red-100 p-5 pt-2 min-w-[8rem] w-fit mt-8"
+        className="border-none shadow-none bg-red-100 p-20 pt-2 min-w-[8rem] w-fit mt-8"
         align="start"
         sideOffset={8}
       >

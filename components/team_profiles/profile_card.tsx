@@ -7,7 +7,7 @@ import { gsap } from 'gsap'
 import { ArrowUpRight } from 'lucide-react'
 
 const ProfileCard = ({ member }: { member: TeamMember }) => {
-  const cardRef = useRef<HTMLAnchorElement>(null)
+  const cardRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)
   const linkedinRef = useRef<HTMLDivElement>(null)
@@ -34,7 +34,7 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
     })
     
     // Position content so LinkedIn is initially hidden below the card
-    gsap.set(content, { y: linkedin ? 50 : 0 })
+    gsap.set(content, { y: linkedin ? 45 : 0 })
 
     // Hover enter animation - scoped to this card's elements only
     const handleMouseEnter = () => {
@@ -65,7 +65,7 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
       exitTimeline = gsap.timeline()
       
       exitTimeline.to(content, {
-          y: linkedin ? 50 : 0,
+          y: linkedin ? 45 : 0,
           duration: 0.3,
           ease: "power2.out"
         })
@@ -96,12 +96,15 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
   }, [])
 
   return (
-    <a 
-      href={"/learn_more"} 
+    <div 
       ref={cardRef} 
       className="relative group overflow-hidden border border-border cursor-pointer block min-h-[300px] sm:min-h-[325px] lg:min-h-[350px] aspect-[4/5]"
-      aria-label={`Learn more about ${member.name}`}
     >
+      <a
+        href={`/team/${member.slug}`}
+        className="absolute inset-0 z-10"
+        aria-label={`Learn more about ${member.name}`}
+      />
         <Image
         ref={imageRef}
         src={member.imageUrl}
@@ -110,39 +113,40 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
         height={694}
         className="w-full h-full object-cover"
         />
-    {/* Green shadow effect that appears on hover */}
-    <div 
-      ref={greenShadowRef}
-      className="absolute inset-0" 
-      style={{ boxShadow: 'inset 0px 0px 100px rgba(77, 255, 148, 0.4)' }}
-    ></div>
     {/* Permanent text background for readability */}
     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent h-32"></div>
-    <div ref={contentRef} className="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+    {/* Green shadow effect that appears on hover - layered on top */}
+    <div 
+      ref={greenShadowRef}
+      style={{ boxShadow: 'inset 0px 0px 100px rgba(77, 255, 148, 0.4)' }}
+      className="absolute inset-0 bg-gradient-to-t from-green-700/60 via-green-500/10 to-green-400/10" 
+    ></div>
+    <div ref={contentRef} className="absolute bottom-0 left-0 right-0 p-6 text-white z-20 group">
       <div>
-        <h5 className="text-2xl font-bold">{member.name}</h5>
+        <h5 className="text-2xl font-bold ">{member.name}</h5>
         <p className="text-base font-normal">{member.title}</p>
         
         {/* LinkedIn link that appears on hover */}
         {member.linkedinUrl && (
           <div ref={linkedinRef} className="mt-3">
-            <span
+            <a
+              href={member.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={(e) => {
-                e.preventDefault()
                 e.stopPropagation()
-                window.open(member.linkedinUrl, '_blank', 'noopener,noreferrer')
               }}
-              className="relative z-30 inline-flex items-center gap-2 text-sm text-white hover:opacity-80 transition-opacity underline underline-offset-4 cursor-pointer"
+              className="relative z-30 inline-flex items-center gap-2 text-sm text-white hover:opacity-80 transition-opacity underline underline-offset-4"
               aria-label={`${member.name}'s LinkedIn profile`}
             >
               <span>LinkedIn</span>
                 <ArrowUpRight size={16} />
-            </span>
+            </a>
           </div>
         )}
       </div>
     </div>
-  </a>
+  </div>
   )
 }
 

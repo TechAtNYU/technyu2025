@@ -1,4 +1,5 @@
 import ProfileCard from '@/components/team_profiles/profile_card'
+import TeamGrid from '@/components/team_profiles/team_grid'
 import { team_members } from '@/lib/consts'
 import { TeamMember } from '@/lib/types'
 import React from 'react'
@@ -9,7 +10,7 @@ const Page = () => {
         <div className='pt-[20svh]'>
 
         </div>
-        <div className='w-[100svw] h-fit flex flex-col items-center pt-[2.5svh] pb-[10svh]'>
+        {/* <div className='w-[100svw] h-fit flex flex-col items-center pt-[2.5svh] pb-[10svh]'>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-[80%] sm:w-[90%] lg:w-[90%] px-[2svw] sm:px-[2svw] lg:px-[4svw]'>
                 {
                     team_members.map((member: TeamMember) => (
@@ -17,7 +18,8 @@ const Page = () => {
                     ))
                 }
             </div>
-        </div>
+        </div> */}
+        <TeamGrid />
     </div>
   )
 }
