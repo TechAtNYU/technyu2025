@@ -8,12 +8,12 @@ const ProgramCard = ({ProgramDetail, variant}: {ProgramDetail: ProgramCardProps,
   return (
     <div className={`rectangle ${variant ? variant : ''} flex justify-between flex-col sm:flex-row`}>
       <div className='flex flex-col w-full sm:w-[70%] p-5 '>
-        <div className='h-24 w-24 flex items-center justify-center relative bg-transparent mt-20 sm:mt-16'>
+        <div className='h-36 w-36 flex items-center justify-center relative mt-20 sm:mt-16 shadow-none'>
           <Image 
-            src={`${svgicon}`} 
+            src={`${svgicon}`}  
             alt={`${name} logo`}
             fill
-            className='w-full h-full bg-transparent'
+            className='w-full h-full bg-none'
           />
         </div>
         <h1 className="text-white text-5xl font-bold text-left tracking-wide pb-3">

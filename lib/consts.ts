@@ -38,14 +38,14 @@ export const programsLinks: ProgramCardProps[] = [
     {
         name: "Tech Treks",
         url: "/tech-treks",
-        svgicon: "location.svg",
+        svgicon: "/program-logos/tech-treks.svg",
         tagline: "The original program for newbies in tech",
         description: "Explore the tech industry with us! Meet professionals, visit companies, and get a behind-the-scenes look at the world of technology."
     },
     {
         name: "Startup Week",
         url: "/startup-week",
-        svgicon: "rocket.svg",
+        svgicon: "/program-logos/startup-week.svg",
         tagline: "Launch your startup journey",
         description: "Join us for a week-long event where you'll learn from industry experts, network with like-minded individuals, and turn your ideas into reality."
     },
