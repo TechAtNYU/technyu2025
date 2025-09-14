@@ -1,4 +1,3 @@
-'use client'
 
 import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
@@ -43,7 +42,7 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
       
       enterTimeline = gsap.timeline()
       
-      enterTimeline.to(image, { scale: 1.1, duration: 0.6, ease: "power2.out" })
+      enterTimeline.to(image, { scale: 1.1, duration: 0.4, ease: "power2.out" }, 0)
         .to(greenShadow, { 
           scaleY: 1,
           opacity: 1, 
@@ -54,7 +53,7 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
           y: linkedin ? -10 : -25,
           duration: 0.3,
           ease: "power2.out"
-        }, 0.1)
+        }, 0)
     }
 
     // Hover exit animation - scoped to this card's elements only
@@ -64,22 +63,23 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
       
       exitTimeline = gsap.timeline()
       
-      exitTimeline.to(content, {
+      exitTimeline.to(image, { 
+          scale: 1, 
+          duration: 0.4, 
+          ease: "power2.out" 
+        }, 0)
+        .to(content, {
           y: linkedin ? 45 : 0,
           duration: 0.3,
           ease: "power2.out"
-        })
+        }, 0)
         .to(greenShadow, { 
           scaleY: 0,
           opacity: 0, 
           duration: 0.3, 
           ease: "power2.in" 
-        }, 0.2)
-        .to(image, { 
-          scale: 1, 
-          duration: 0.4, 
-          ease: "power2.out" 
         }, 0)
+
     }
 
     card.addEventListener('mouseenter', handleMouseEnter)

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import NavigationDropdown from './navigation_dropdown'
 import { programs } from '@/lib/consts'
