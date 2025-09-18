@@ -1,7 +1,4 @@
-import ProfileCard from '@/components/team_profiles/profile_card'
 import TeamGrid from '@/components/team_profiles/team_grid'
-import { team_members } from '@/lib/consts'
-import { TeamMember } from '@/lib/types'
 import React from 'react'
 
 const Page = () => {
