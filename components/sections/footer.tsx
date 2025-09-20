@@ -9,7 +9,7 @@ const Footer = () => {
     <section className='w-full bg-[#191919] min-h-48 px-5 flex flex-col text-[#FFFFFF]'>
         <div className='pt-5 w-full flex justify-between md:flex-row flex-col'>
             <div className="relative w-48 h-16 md:w-60 md:h-20">
-                <Image src="/technyu.svg" alt="Technyu Logo" fill style={{objectFit: 'contain'}} priority />
+                <Image src="/logo.svg" alt="Technyu Logo" fill style={{objectFit: 'contain'}} priority />
             </div>
             <div className='flex flex-row py-5 md:py-0 gap-2.5 text-lg'>
                 <div className=' flex flex-col'>

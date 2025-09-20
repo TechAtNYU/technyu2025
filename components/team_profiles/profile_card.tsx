@@ -121,7 +121,7 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
       style={{ boxShadow: 'inset 0px 0px 100px rgba(77, 255, 148, 0.4)' }}
       className="absolute inset-0 bg-gradient-to-t from-green-700/60 via-green-500/10 to-green-400/10" 
     ></div>
-    <div ref={contentRef} className="absolute bottom-0 left-0 right-0 p-6 text-white z-20 group">
+    <div ref={contentRef} className="absolute bottom-0 left-0 right-0 p-6 text-white z-10 group">
       <div>
         <h5 className="text-2xl font-bold ">{member.name}</h5>
         <p className="text-base font-normal">{member.title}</p>

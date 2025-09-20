@@ -12,7 +12,7 @@ const TeamGrid = () => {
   const [searchQuery, setSearchQuery] = useState("")
   const [activeFilter, setActiveFilter] = useState("All")
   const [displayedFilter, setDisplayedFilter] = useState("All")
-  const [isAnimating, setIsAnimating] = useState(false)
+  // onst [isAnimating, setIsAnimating] = useState(false)
   const gridRef = useRef<HTMLDivElement>(null)
 
   // Extract unique categories from team members
@@ -31,8 +31,6 @@ const TeamGrid = () => {
       setDisplayedFilter(newFilter)
       return
     }
-
-    setIsAnimating(true)
     
     const timeline = gsap.timeline()
     
@@ -52,9 +50,9 @@ const TeamGrid = () => {
       opacity: 1, 
       duration: 0.3, 
       ease: "power2.inOut",
-      onComplete: () => {
-        setIsAnimating(false)
-      }
+      // onComplete: () => {
+      //   setIsAnimating(false)
+      // }
     })
   }
 
@@ -82,7 +80,7 @@ const TeamGrid = () => {
   return (
     <div className='w-[100svw] h-fit flex flex-col items-center pb-[20svh] pt-[10svh]'>
       {/* Sticky Filter Section */}
-      <div className='sticky top-39 z-30 w-[100svw] flex justify-center bg-black'>
+      <div className='sticky top-0 z-20 w-[100svw] flex justify-center bg-black pt-[9.75rem]'>
         {/* Desktop Filter Section */}
         <TeamFiltersDesktop
           categories={categories}

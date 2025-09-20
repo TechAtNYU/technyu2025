@@ -25,6 +25,7 @@ export const programsLinks: ProgramCardProps[] = [
     {
         name: "Dev Team",
         url: "/dev-team",
+        appOpen: false,
         svgicon: "/program-logos/dev-team.svg",
         tagline: "F**K albert, we're building a better one",
         description: "Build in a small cohort from 0 -> 1, learning from users, and creating public proof of work as we simulate the startup lifecycle with proper practice. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
@@ -32,6 +33,7 @@ export const programsLinks: ProgramCardProps[] = [
     {
         name: "Tech Treks",
         url: "/tech-treks",
+        appOpen: false,
         svgicon: "/program-logos/tech-treks.svg",
         tagline: "The original program for newbies in tech",
         description: "Explore the tech industry with us! Meet professionals, visit companies, and get a behind-the-scenes look at the world of technology."
@@ -39,6 +41,7 @@ export const programsLinks: ProgramCardProps[] = [
     {
         name: "Startup Week",
         url: "/startup-week",
+        appOpen: false,
         svgicon: "/program-logos/startup-week.svg",
         tagline: "Launch your startup journey",
         description: "Join us for a week-long event where you'll learn from industry experts, network with like-minded individuals, and turn your ideas into reality."
@@ -46,6 +49,7 @@ export const programsLinks: ProgramCardProps[] = [
     {
         name: "Mentorship",
         url: "/mentorship",
+        appOpen: false,
         svgicon: "/program-logos/mentorship.svg",
         tagline: "Guidance from those who came before you",
         description: "Connect with experienced mentors who can provide valuable insights, advice, and support as you navigate your career in tech."

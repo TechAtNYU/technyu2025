@@ -12,17 +12,18 @@ const Navbar = () => {
 
   const [isActive, setIsActive] = useState(false);
   return (
-    <div className='fixed w-full z-[10]'>
+    <div className='fixed w-full z-[30]'>
         <div className='flex w-full justify-center relative font-bold p-[10px] pb-0 box-border z-[50]'>
-            <div className='outline outline-white rounded-3xl w-[90%] md:w-[85svw] min-h-24 p-5 text-lg bg-black mt-10   flex'>
+            <div className='outline outline-white rounded-3xl w-[90%] md:w-[85svw] min-h-24 p-5 text-lg bg-black mt-10 flex'>
                 <div className='w-full h-full flex justify-between items-center'>
                     <Link href="/">
                         <Image src="/logo.svg" alt="tech@nyu logo" width={200} height={50} className='object-contain w-[160px] h-[40px] md:w-[200px] md:h-[50px]'/>
                     </Link>
                     <div className='gap-5 md:gap-10 text-xl lg:text-2xl hidden md:flex text-center'>
                         <Link href="/team" className='text-white hover:underline '>Team</Link>
-                        <Link href="#" className='text-white hover:underline'>About</Link>
-                        <NavigationDropdown name="Programs" items={programs.map(prog => ({ name: prog, href: `#${prog.toLowerCase().replace(/\s+/g, '-')}` }))} />
+                        {/* <NavigationDropdown name="Programs" items={programs.map(prog => ({ name: prog, href: `#${prog.toLowerCase().replace(/\s+/g, '-')}` }))} /> */}
+
+                        <Link href="#" className='text-white hover:underline'>Collab</Link>
                         <Link href="#" className='text-white hover:underline'>Contact</Link>
                     </div>
                     <div className='md:hidden flex items-center justify-center gap-2 text-white text-sm' onClick={() => setIsActive(!isActive)}>
@@ -43,7 +44,7 @@ const Navbar = () => {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: "-100%", opacity: 0 }}
                                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                                    className="fixed inset-0 z-[0] backdrop-blur-lg bg-black/30"
+                                    className="fixed md:hidden inset-0 z-[0] backdrop-blur-lg bg-black/30"
                                 />
                                 <NavbarMobile/>
                             </>
