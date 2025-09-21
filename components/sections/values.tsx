@@ -33,18 +33,18 @@ const Values = () => {
       <div className="relative z-20 w-full h-[300svh] mt-[10vh] mb-[10vh] pt-[10vh]">
         {/* Parallax sticky cards */}
         <div className="sticky top-0 w-full h-screen mt-[10vh]">
-          <div className="w-[80vw] h-[50vh]flex items-center justify-center text-black text-3xl font-bold ml-[5vw]">
-            <ValueCard ProgramDetail={{name: "Innovation", url: "#", svgicon: "/values-logos/innovation.svg", description: "We strive to push the boundaries of technology and creativity, fostering an environment where new ideas can flourish."}} variant=""/>
+          <div className="w-[80vw] h-[50vh]flex items-center justify-center text-3xl font-bold ml-[5vw]">
+            <ValueCard ProgramDetail={{name: "Innovation", url: "#", svgicon: "/values-logos/innovation.svg", description: "We strive to push the boundaries of technology and creativity, fostering an environment where new ideas can flourish."}} variant="purple"/>
           </div>
         </div>
         <div className="sticky top-[11vh] w-full h-screen flex items-center justify-center">
-          <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-red-900 text-3xl font-bold ml-[10vw]">
-            <ValueCard ProgramDetail={{name: "Community", url: "#", svgicon: "/values-logos/community.svg", description: "We believe in the power of community and collaboration, working together to achieve common goals."}} variant=""/>
+          <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
+            <ValueCard ProgramDetail={{name: "Community", url: "#", svgicon: "/values-logos/community.svg", description: "We believe in the power of community and collaboration, working together to achieve common goals."}} variant="green"/>
           </div>
         </div>
         <div className="sticky top-[50vh] w-full flex items-start justify-start pb-[10vh]">
-          <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-blue-900 text-3xl font-bold ml-[10vw]">
-            <ValueCard ProgramDetail={{name: "Growth", url: "#", svgicon: "/values-logos/growth.svg", description: "We are committed to continuous growth and improvement, both as individuals and as an organization."}} variant=""/>
+          <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
+            <ValueCard ProgramDetail={{name: "Growth", url: "#", svgicon: "/values-logos/growth.svg", description: "We are committed to continuous growth and improvement, both as individuals and as an organization."}} variant="purple"/>
           </div>
         </div>
       </div>
