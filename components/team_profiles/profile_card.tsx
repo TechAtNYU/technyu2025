@@ -36,7 +36,7 @@ const ProfileCard = ({ member }: { member: TeamMember }) => {
     
     // Set initial state for fade image if it exists
     if (fadeImage && member.fadeIn) {
-      gsap.set(fadeImage, { opacity: 0, delay: 0.3 })
+      gsap.set(fadeImage, { opacity: 0 })
     }
     
     // Position content so LinkedIn is initially hidden below the card

@@ -20,22 +20,19 @@ type BodyProps = {
 
 export default function Body({ links, selectedLink, setSelectedLink }: BodyProps) {
     const getChars = (word: string) => {
-        let chars = [];
-        word.split("").forEach((char, i) => {
-            chars.push(
-                <motion.span
-                    custom={[i * 0.02, (word.length - i) * 0.01]}
-                    variants={translate}
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
-                    key={char + i}
-                    className="satoshi"
-                >
-                    {char}
-                </motion.span>
-            );
-        });
+        const chars = word.split("").map((char, i) => (
+            <motion.span
+                custom={[i * 0.02, (word.length - i) * 0.01]}
+                variants={translate}
+                initial="initial"
+                animate="enter"
+                exit="exit"
+                key={char + i}
+                className="satoshi"
+            >
+                {char}
+            </motion.span>
+        ));
         return chars;
     };
 

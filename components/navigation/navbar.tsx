@@ -2,8 +2,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavigationDropdown from './navigation_dropdown'
-import { programs } from '@/lib/consts'
+// When the time comes to build the program pages
+// import NavigationDropdown from './navigation_dropdown'
+// import { programs } from '@/lib/consts'
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './style.module.css';
 import NavbarMobile from './NavbarMobile'
@@ -22,7 +23,7 @@ const Navbar = () => {
                     <div className='gap-5 md:gap-10 text-xl lg:text-2xl hidden md:flex text-center'>
                         <Link href="/team" className='text-white hover:underline '>Team</Link>
                         {/* <NavigationDropdown name="Programs" items={programs.map(prog => ({ name: prog, href: `#${prog.toLowerCase().replace(/\s+/g, '-')}` }))} /> */}
-
+                        {/* For future patch */}
                         <Link href="#" className='text-white hover:underline'>Collab</Link>
                         <Link href="#" className='text-white hover:underline'>Contact</Link>
                     </div>
