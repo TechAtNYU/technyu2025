@@ -5,7 +5,11 @@ import Body from './mobile_body/nav_body';
 import { height } from './mobileanim';
 import { satoshi } from '@/lib/fonts';
 
-const NavbarMobile = () => {
+type NavbarMobileProps = {
+    setIsActive: (active: boolean) => void;
+}
+
+const NavbarMobile = ({ setIsActive }: NavbarMobileProps) => {
     const links = [
         {
             title: "Team",
@@ -43,7 +47,7 @@ const NavbarMobile = () => {
         <motion.div variants={height} initial="initial" animate="enter" exit="exit"  className={` ${satoshi.variable} overflow-hidden w-full md:hidden`}>
             <div className={styles.wrapper}>
                 <div className={styles.container}>
-                    <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink}/>
+                    <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink} setIsActive={setIsActive}/>
                     {/* <Footer /> */}
                 </div>
             </div>

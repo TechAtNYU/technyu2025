@@ -38,18 +38,18 @@ const Navbar = () => {
             </div>
         </div>
         <AnimatePresence mode='wait'>
-                        {isActive && (
-                            <>
-                                <motion.div
-                                    initial={{ y: "-100%", opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    exit={{ y: "-100%", opacity: 0 }}
-                                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                                    className="fixed md:hidden inset-0 z-[0] backdrop-blur-lg bg-black/30"
-                                />
-                                <NavbarMobile/>
-                            </>
-                        )}
+            {isActive && (
+                <>
+                    <motion.div
+                        initial={{ y: "-100%", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: "-100%", opacity: 0 }}
+                        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                        className="fixed md:hidden inset-0 z-[0] backdrop-blur-lg bg-black/30"
+                    />
+                    <NavbarMobile setIsActive={setIsActive}/>
+                </>
+            )}
         </AnimatePresence>
     </div>
   )

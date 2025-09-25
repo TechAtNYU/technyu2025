@@ -16,9 +16,10 @@ type BodyProps = {
     links: LinkType[];
     selectedLink: SelectedLinkType;
     setSelectedLink: (link: SelectedLinkType) => void;
+    setIsActive: (active: boolean) => void;
 };
 
-export default function Body({ links, selectedLink, setSelectedLink }: BodyProps) {
+export default function Body({ links, selectedLink, setSelectedLink, setIsActive }: BodyProps) {
     const getChars = (word: string) => {
         const chars = word.split("").map((char, i) => (
             <motion.span
@@ -43,7 +44,12 @@ export default function Body({ links, selectedLink, setSelectedLink }: BodyProps
                     {links.map((link, index) => {
                         const { title, href } = link;
                         return (
-                            <Link key={`l_${index}`} href={href} className="w-full">
+                            <Link 
+                                key={`l_${index}`} 
+                                href={href} 
+                                className="w-full"
+                                onClick={() => setIsActive(false)}
+                            >
                                 <motion.p
                                     onMouseOver={() => {    
                                         setSelectedLink({ isActive: true, index });
