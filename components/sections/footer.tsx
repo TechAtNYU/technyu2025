@@ -21,13 +21,13 @@ const Footer = () => {
                 <div className='ml-10 flex flex-col'>
                     <h3 className='font-bold text-lg'>Programs</h3>
                     {programs.map((program) => (
-                        <FooterAnchor key={program} name={program} />
+                        <FooterAnchor key={program} name={program}  />
                     ))}
                 </div>
                 <div className='ml-10 flex flex-col'>
                     <h3 className='font-bold'>Contact</h3>
                     {contacts.map((contact) => (
-                        <FooterAnchor key={contact} name={contact} />
+                        <FooterAnchor key={contact[0]} name={contact[0]} href={contact[1]} />
                     ))}
                 </div>
             </div>
@@ -42,12 +42,13 @@ const Footer = () => {
 
 type FooterAnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     name: string;
+    href?: string;
 };
 
-const FooterAnchor: React.FC<FooterAnchorProps> = ({ name, ...rest }) => {
+const FooterAnchor: React.FC<FooterAnchorProps> = ({ name, href, ...rest }) => {
     return (
         <a
-            href={`#${name.toLowerCase().replace(/\s+/g, '-')}`}
+            href={href ? href : '#'}
             className='hover:underline'
             {...rest}
         >

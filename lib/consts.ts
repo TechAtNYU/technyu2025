@@ -1,5 +1,4 @@
-import { url } from "inspector"
-import { ProgramCardProps, TeamMember } from "./types"
+import { ProgramCardProps, TeamMember, ValueCardProps } from "./types"
 
 export const programs = [
     "Dev Team",
@@ -8,12 +7,12 @@ export const programs = [
     "Mentorship",
 ]
 
-export const contacts = [
-    "Email",
-    "Newsletter",
-    "Instagram",
-    "Discord",
-    "LinkedIn",
+export const contacts: [string, string][] = [
+    ["Email", "mailto:hello@techatnyu.org"],
+    ["Newsletter", "/newsletter"],
+    ["Instagram", "https://www.instagram.com/techatnyu"],
+    ["Discord", "https://discord.gg/q3cBnFMpMQ"],
+    ["LinkedIn", "https://www.linkedin.com/company/tech-at-nyu"],
 ]
 
 export const about = [
@@ -216,5 +215,26 @@ export const team_members: TeamMember[] = [
         imageUrl: "/team_pics/terri-burns.png",
         linkedinUrl: "https://www.linkedin.com/in/terri-burns-927b4b1b/",
         slug: "terri-burns"
+    }
+]
+
+export const valuesData: ValueCardProps[] = [
+    {
+        name: "Community",
+        url: "#",
+        svgicon: "/value-logos/community.svg",
+        description: "Meet other tech-enthusiasts, builders, and curious minds."
+    },
+    {
+        name: "Learning", 
+        url: "#",
+        svgicon: "/value-logos/learning.svg",
+        description: "Pick up new skills or brush up your code."
+    },
+    {
+        name: "Creativity",
+        url: "#", 
+        svgicon: "/value-logos/creativity.svg",
+        description: "Ideate and innovate your ideas through design and creative computing."
     }
 ]

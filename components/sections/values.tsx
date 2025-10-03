@@ -1,13 +1,14 @@
 import React from 'react'
 import ValueCard from '../values/value_card'
+import { valuesData } from '@/lib/consts'
 
 const Values = () => {
   return (
     <section id='values' className="relative">
       {/* Grid background */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 mb-10" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         {/* Vertical grid lines */}
-        {[...Array(18)].map((_, i) => (
+        {[...Array(19)].map((_, i) => (
           <line
             key={`vgrid-${i}`}
             x1={`${(i * 100) / 18}%`} y1="0" x2={`${(i * 100) / 18}%`} y2="100%"
@@ -34,17 +35,17 @@ const Values = () => {
         {/* Parallax sticky cards */}
         <div className="sticky top-0 w-full h-screen mt-[10vh]">
           <div className="w-[80vw] h-[50vh] flex items-center justify-center text-3xl font-bold ml-[5vw]">
-            <ValueCard ProgramDetail={{name: "Innovation", url: "#", svgicon: "/values-logos/innovation.svg", description: "We strive to push the boundaries of technology and creativity, fostering an environment where new ideas can flourish."}} variant="purple"/>
+            <ValueCard ProgramDetail={valuesData[0]} variant="purple"/>
           </div>
         </div>
         <div className="sticky top-[11vh] w-full h-screen flex items-center justify-center">
           <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
-            <ValueCard ProgramDetail={{name: "Community", url: "#", svgicon: "/values-logos/community.svg", description: "We believe in the power of community and collaboration, working together to achieve common goals."}} variant="green"/>
+            <ValueCard ProgramDetail={valuesData[1]} variant="green"/>
           </div>
         </div>
         <div className="sticky top-[50vh] w-full flex items-start justify-start pb-[10vh]">
           <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
-            <ValueCard ProgramDetail={{name: "Growth", url: "#", svgicon: "/values-logos/growth.svg", description: "We are committed to continuous growth and improvement, both as individuals and as an organization."}} variant="purple"/>
+            <ValueCard ProgramDetail={valuesData[2]} variant="purple"/>
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ const TeamFiltersDesktop = ({
               className={`font-medium transition-colors hover:text-green-600 pb-1 ${
                 activeFilter === category 
                   ? "border-b-2 border-green-500 text-green-600" 
-                  : "border-b-2 border-transparent text-gray-600"
+                  : "border-b-2 border-transparent text-gray-100"
               }`}
             >
               {category}

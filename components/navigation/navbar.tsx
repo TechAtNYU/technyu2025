@@ -24,8 +24,8 @@ const Navbar = () => {
                         <Link href="/team" className='text-white hover:underline '>Team</Link>
                         {/* <NavigationDropdown name="Programs" items={programs.map(prog => ({ name: prog, href: `#${prog.toLowerCase().replace(/\s+/g, '-')}` }))} /> */}
                         {/* For future patch */}
-                        <Link href="#" className='text-white hover:underline'>Collab</Link>
-                        <Link href="#" className='text-white hover:underline'>Contact</Link>
+                        <Link href="mailto:hello@techatnyu.org" className='text-white hover:underline'>Collab</Link>
+                        <Link href="mailto:hello@techatnyu.org" className='text-white hover:underline'>Contact</Link>
                     </div>
                     <div className='md:hidden flex items-center justify-center gap-2 text-white text-sm' onClick={() => setIsActive(!isActive)}>
                         <div className={`${styles.label} cursor-pointer`}>

@@ -6,13 +6,10 @@ import Values from "@/components/sections/values";
 
 export default function Home() {
   return (
-    <div>
-      <div className="w-full h-fit bg-black min-h-screen">
-        <Hero />
-        <Values />
-        <ProgramSection />
-      </div>
-      <Footer />
+    <div className="w-full h-fit bg-black min-h-screen">
+      <Hero />
+      <Values />
+      <ProgramSection />
     </div>
   );
 }

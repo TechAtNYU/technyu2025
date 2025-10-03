@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navigation/navbar";
 import { satoshi } from "@/lib/fonts";
+import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = {
   title: "Tech@NYU",
@@ -20,7 +21,7 @@ export default function RootLayout({
       >
           <Navbar />
           {children}
-        
+          <Footer />
       </body>
     </html>
   );

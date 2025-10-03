@@ -14,8 +14,17 @@ const ValueCard = ({ProgramDetail, variant}: {ProgramDetail: ValueCardProps, var
                 </h1>
             </div>
       <div className='flex items-center justify-center w-full md:h-[40vh]'>
-        <p className='text-white text-lg lg:text-[2svw] w-full h-full flex items-center justify-center text-left p-10'>{description}</p>
-            </div>
+        <div className='flex flex-col-reverse md:flex-row items-center justify-between md:gap-6 w-full h-full p-10'>
+          <p className='text-white text-lg lg:text-[2svw] text-left'>{description}</p>
+          <Image 
+            src={svgicon}  
+            alt={`${name} icon`}
+            width={320}
+            height={320}
+            className='w-32 h-32 md:w-42 md:h-42 flex-shrink-0'
+          />
+        </div>
+      </div>
     </div>
   )
 }
