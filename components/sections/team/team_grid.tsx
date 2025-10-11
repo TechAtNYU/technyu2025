@@ -78,9 +78,9 @@ const TeamGrid = () => {
   }, [searchQuery, displayedFilter])
 
   return (
-    <div className='w-[100svw] h-fit flex flex-col items-center pb-[20svh] pt-[10svh]'>
+    <div className='w-[100svw] h-fit flex flex-col items-center pb-[20svh]'>
       {/* Sticky Filter Section */}
-      <div className='sticky top-0 z-20 w-[100svw] flex justify-center bg-black pt-[9.75rem]'>
+      <div className='sticky top-0 z-20 w-[100svw] flex justify-center border-b-2 border-white bg-black pt-[20svh]'>
         {/* Desktop Filter Section */}
         <TeamFiltersDesktop
           categories={categories}

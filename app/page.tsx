@@ -1,6 +1,5 @@
 'use client';
-import ProgramSection from "@/components/programs/program_section";
-import Footer from "@/components/sections/footer";
+import ProgramSection from "@/components/sections/programs/program_section";
 import Hero from "@/components/sections/hero";
 import Values from "@/components/sections/values";
 

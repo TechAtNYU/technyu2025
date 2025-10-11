@@ -7,15 +7,21 @@ import Link from 'next/link'
 // import { programs } from '@/lib/consts'
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './style.module.css';
-import NavbarMobile from './NavbarMobile'
+import NavbarMobile from './navbar-mobile'
 
 const Navbar = () => {
 
   const [isActive, setIsActive] = useState(false);
   return (
-    <div className='fixed w-full z-[30]'>
+    <motion.div 
+      className='fixed w-full z-[30]'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5, delay: 0.75, ease:[0.65, 0, 0.35, 1] }}
+      
+    >
         <div className='flex w-full justify-center relative font-bold p-[10px] pb-0 box-border z-[50]'>
-            <div className='outline outline-white rounded-3xl w-[90%] md:w-[85svw] min-h-24 p-5 text-lg bg-black mt-10 flex'>
+            <div className='outline outline-white rounded-xl lg:rounded-3xl w-[90%] md:w-[85svw] lg:w-[95svw] h-16 md:min-h-24 p-5 text-lg bg-black mt-2 md:mt-10 flex'>
                 <div className='w-full h-full flex justify-between items-center'>
                     <Link href="/">
                         <Image src="/logo.svg" alt="tech@nyu logo" width={200} height={50} className='object-contain w-[160px] h-[40px] md:w-[200px] md:h-[50px]'/>
@@ -51,7 +57,7 @@ const Navbar = () => {
                 </>
             )}
         </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }
 

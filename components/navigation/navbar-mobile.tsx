@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import React, { useState } from 'react'
 import styles from './navigation.module.css'
-import Body from './mobile_body/nav_body';
+import Body from './mobile-body/nav_body';
 import { height } from './mobileanim';
 import { satoshi } from '@/lib/fonts';
 

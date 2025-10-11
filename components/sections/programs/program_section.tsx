@@ -1,6 +1,6 @@
 import React from 'react'
 import { programsLinks } from '@/lib/consts'
-import ProgramCard from './pcard/programcard'
+import ProgramCard from './pcard/program-card'
 const ProgramSection = () => {
   return (
     <section id='programs' className='w-full h-fit flex flex-col items-center gap-10 md:gap-20 pt-5 pb-20'>

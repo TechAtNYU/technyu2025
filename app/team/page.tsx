@@ -1,4 +1,4 @@
-import TeamGrid from '@/components/team_profiles/team_grid'
+import TeamGrid from '@/components/sections/team/team_grid'
 import React from 'react'
 
 const Page = () => {

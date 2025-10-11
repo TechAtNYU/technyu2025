@@ -1,14 +1,14 @@
 import React from 'react'
-import ValueCard from '../values/value_card'
+import ValueCard from './values/value_card'
 import { valuesData } from '@/lib/consts'
 
 const Values = () => {
   return (
     <section id='values' className="relative">
       {/* Grid background */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 mb-10" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         {/* Vertical grid lines */}
-        {[...Array(19)].map((_, i) => (
+        {[...Array(18)].map((_, i) => (
           <line
             key={`vgrid-${i}`}
             x1={`${(i * 100) / 18}%`} y1="0" x2={`${(i * 100) / 18}%`} y2="100%"
@@ -19,7 +19,7 @@ const Values = () => {
           />
         ))}
         {/* Horizontal grid lines */}
-        {[...Array(24)].map((_, i) => (
+        {[...Array(25)].map((_, i) => (
           <line
             key={`hgrid-${i}`}
             x1="0" y1={`${(i * 100) / 24}%`} x2="100%" y2={`${(i * 100) / 24}%`}
@@ -31,9 +31,12 @@ const Values = () => {
         ))}
       </svg>
       {/* Content goes here */}
-      <div className="relative z-20 w-full h-[300svh] mt-[10vh] mb-[10vh] pt-[10vh]">
+      <div className="relative z-20 w-full h-[300svh] mb-[10vh]">
+        <h2 className='px-[5vw] py-[1vw] text-[3vw] w-fi bg-black '>
+          OUR VALUES
+        </h2>
         {/* Parallax sticky cards */}
-        <div className="sticky top-0 w-full h-screen mt-[10vh]">
+        <div className="sticky top-[20vh] w-full h-[90vh] mt-[10vh]">
           <div className="w-[80vw] h-[50vh] flex items-center justify-center text-3xl font-bold ml-[5vw]">
             <ValueCard ProgramDetail={valuesData[0]} variant="purple"/>
           </div>

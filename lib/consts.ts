@@ -27,7 +27,7 @@ export const programsLinks: ProgramCardProps[] = [
         appOpen: false,
         svgicon: "/program-logos/dev-team.svg",
         tagline: "F**K albert, we're building a better one",
-        description: "Build in a small cohort from 0 -> 1, learning from users, and creating public proof of work as we simulate the startup lifecycle with proper practice. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+        description: "Build in a small cohort from 0 -> 1, learning from users, and creating public proof of work as we simulate the startup lifecycle with proper practice. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id."
     },
     {
         name: "Tech Treks",
