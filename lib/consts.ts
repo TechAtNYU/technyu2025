@@ -418,9 +418,9 @@ export const startupWeekCompanies = [
         height: 60
     },
     {
-        src: "/company-logos/openai.svg",
-        alt: "OpenAI",
-        width: 59,
+        src: "/company-logos/anthropic.svg",
+        alt: "Anthropic",
+        width: 87,
         height: 60
     },
     {
@@ -439,12 +439,6 @@ export const startupWeekCompanies = [
         src: "/company-logos/google.svg",
         alt: "Google",
         width: 183,
-        height: 60
-    },
-    {
-        src: "/company-logos/anthropic.svg",
-        alt: "Anthropic",
-        width: 87,
         height: 60
     },
     {
@@ -538,16 +532,16 @@ export const devTeamRoles = [
 // Mentorship FAQ data
 export const mentorshipFAQ = [
     {
+        question: "What kind of mentors do you have?",
+        answer: "Our mentors are industry professionals working at top tech companies like Google, Meta, Microsoft, early-stage startups, and successful entrepreneurs. They span various roles including software engineers, product managers, designers, data scientists, and founders with 3-15+ years of experience. If you are keen on supporting this initative send us an email at hello@techatnyu.org with the subject line 'Mentorship Volunteer'."
+    },
+    {
         question: "How long does the mentorship program last?",
         answer: "Our mentorship program typically runs for one semester (about 4 months). This gives you enough time to build a meaningful relationship with your mentor and work towards your goals. Some mentorships may continue beyond the formal program if both parties agree."
     },
     {
         question: "How are mentors and mentees matched?",
         answer: "We use a careful matching process based on your goals, interests, background, and career aspirations. After you submit your application, our mentorship leads will interview you to better understand your needs. We then match you with a mentor who has relevant experience and can best support your journey."
-    },
-    {
-        question: "What kind of mentors do you have?",
-        answer: "Our mentors are industry professionals working at top tech companies like Google, Meta, Microsoft, early-stage startups, and successful entrepreneurs. They span various roles including software engineers, product managers, designers, data scientists, and founders with 3-15+ years of experience."
     },
     {
         question: "How often do I meet with my mentor?",

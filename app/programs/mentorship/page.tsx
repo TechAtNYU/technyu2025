@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion"
 const Page = () => {
   return (
-      <div className='min-h-screen pt-[12rem]'>
+      <div className='min-h-screen pt-[6rem] md:pt-[12rem]'>
         <section id='about-sw' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw]'>
                 <div className='lg:max-w-[60vw]'>
                 <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Mentorship</h1>
@@ -26,7 +26,7 @@ const Page = () => {
                     Whether its building a startup, learning to ace leetcode interviews, building projects, its up to you and your effort.
                   </p>
 
-                  <ApplicationStatus isOpen={false} color="red" className='w-[40vw]'/>
+                  <ApplicationStatus isOpen={false} color="red" className='md:w-[40vw]'/>
                   </div>
                   <Image
                     src={`/program-logos/mentorship.svg`}
@@ -73,9 +73,10 @@ const Page = () => {
           <ApplicationStatus isOpen={false} color="red" className='w-[40vw]' />
         </section>
         <section id='faq' className='mt-16 px-[5vw] pb-20'>
-          <h2 className='text-white text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-8 underline underline-offset-10'>
+          <h2 className='text-white text-2xl md:text-4xl lg:text-4xl font-bold text-left mb-8 underline underline-offset-15'>
             Frequently Asked Questions
           </h2>
+          
           <div className='max-w-4xl'>
             <Accordion type="single" collapsible className="w-full">
               {mentorshipFAQ.map((faq, index) => (

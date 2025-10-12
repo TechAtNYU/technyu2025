@@ -32,7 +32,7 @@ const Values = () => {
       </svg>
       {/* Content goes here */}
       <div className="relative z-20 w-full h-[300svh] mb-[10vh]">
-        <h2 className='px-[5vw] py-[1vw] text-[3vw] w-fi bg-black '>
+        <h2 className='px-[5vw] py-[1vw] text-2xl lg:text-4xl font-extrabold bg-black '>
           OUR VALUES
         </h2>
         {/* Parallax sticky cards */}
