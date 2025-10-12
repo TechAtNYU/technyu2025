@@ -31,7 +31,7 @@ export default function Body({ links, selectedLink, setSelectedLink, setIsActive
                 key={char + i}
                 className="satoshi"
             >
-                {char}
+                {char === " " ? "\u00A0" : char}
             </motion.span>
         ));
         return chars;

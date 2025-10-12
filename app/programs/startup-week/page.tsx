@@ -21,9 +21,9 @@ const Page = () => {
                     Startup Week is open to all NYU students, regardless of their major or level of experience. We encourage students from all backgrounds to participate and contribute to the vibrant entrepreneurial community at NYU.
                   </p>
                   <p className='text-white text-lg md:text-xl lg:text-2xl pb-10'>
-                    Stay tuned for more details on <a href="#" className='text-blue-500 hover:text-blue-400 transition-colors'>how to get involved</a>!
+                    Feel free to checkout the Startup Week website what we had for the 2025 version at <a href="https://www.nyustartupweek.org" className='text-blue-500 hover:text-blue-400 transition-colors'>www.nyustartupweek.org</a>
                   </p>
-                  <ApplicationStatus isOpen={false} color="red" />
+                  <ApplicationStatus isOpen={false} color="red" className='md:w-[16rem]'/>
                   </div>
                   <Image
                     src={`/program-logos/startup-week.svg`}
@@ -47,7 +47,7 @@ const Page = () => {
           />
         </section>
         <section id='the-week' className='mt-16'>
-          <h2 className='text-white text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-8 px-[5vw] underline underline-offset-10'>Startup Week Structure</h2>
+          <h2 className='text-white text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-4 md:mb-8 px-[5vw] underline underline-offset-10'>Startup Week Structure</h2>
           <StickyScroll
           
           content={[{

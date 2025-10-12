@@ -68,13 +68,13 @@ export const StickyScroll = ({
       // animate={{
       //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       // }}
-      className={`flex justify-center md:space-x-10 rounded-md p-4 md:p-10 py-0 px-[5vw] w-full overflow-hidden ${containerClassName ? containerClassName : 'md:min-h-[200vh]'}`}
+      className={`flex justify-center md:space-x-10 rounded-md p-10 py-0 px-[5vw] ${containerClassName ? containerClassName : 'min-h-[200vh]'}`}
       ref={ref}
     >
-      <div className="relative flex items-start w-full">
+      <div className="div relative flex items-start">
         <div className="w-full lg:w-[50vw]">
           {content.map((item, index) => (
-            <div key={item.title + index} className={`my-20 lg:my-40 ${index == content.length - 1 ? 'pb-[20vh]' : 'md:min-h-[40vh]'}`}>
+            <div key={item.title + index} className={`${index === 0 ? ' my-20 md:mb-40' : 'my-20 md:my-40'} ${index == content.length - 1 ? 'pb-[20vh]' : 'min-h-[30vh]'}`}>
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -93,21 +93,16 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg mt-5 max-w-full lg:max-w-xl text-slate-300 pr-4 lg:pr-0"
+                className="text-lg mt-5 max-w-sm lg:max-w-xl text-slate-300"
               >
                 {item.description}
               </motion.p>
-              {/* Mobile image - shows below text on small screens */}
-              <motion.div
-              initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-              className="md:hidden mt-6 w-full min-h-[30vh] relative rounded-lg overflow-hidden">
-                {item.content}
-              </motion.div>
+              {/* Mobile content display */}
+              {item.content && (
+                <div className="mt-8 md:hidden w-full rounded-lg overflow-hidden">
+                  {item.content}
+                </div>
+              )}
             </div>
           ))}
           
@@ -116,7 +111,7 @@ export const StickyScroll = ({
       <motion.div
         
         className={cn(
-          "sticky top-[20vh] hidden h-[40vh] mt-[10vh] w-[40vw] lg:w-[50vw] overflow-hidden md:block",
+          "sticky top-[20vh] hidden h-[40vh] mt-[10vh] w-[50vw] overflow-hidden md:block",
           contentClassName,
         )}
       >

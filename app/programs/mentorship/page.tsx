@@ -37,7 +37,7 @@ const Page = () => {
                   />
               </section>
         <section id='process' className='mt-16'>
-          <h2 className='text-white text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-8 px-[5vw] underline underline-offset-10'>
+          <h2 className='text-white text-3xl md:text-4xl lg:text-5xl font-bold text-left mb-4 md:mb-8 px-[5vw] underline underline-offset-10'>
             Mentorship Process
           </h2>
           <StickyScroll

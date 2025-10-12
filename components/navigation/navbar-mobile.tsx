@@ -16,15 +16,15 @@ const NavbarMobile = ({ setIsActive }: NavbarMobileProps) => {
             href: "/team",
         },
         {
-            title: "Contact",
-            href: "/contact",
+            title: "About Us",
+            href: "/about",
         },
         {
             title: "Startup Week",
             href: "/programs/startup-week",
         },
         {
-            title: "Tech-Treks",
+            title: "Tech Treks",
             href: "/programs/tech-treks",
         },
         {
