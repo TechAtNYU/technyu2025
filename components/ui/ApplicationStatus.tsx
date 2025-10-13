@@ -14,7 +14,7 @@ export const ApplicationStatus = ({ isOpen, color, className }: { isOpen: boolea
   return (
     <div className={`border border-white rounded-2xl py-2 px-4 flex justify-between items-center mb-4 ${className ? className : 'w-full'}`}>
       <p className="text-white">{isOpen ? "Applications Open" : "Applications Closed"}</p>
-      <div className={`w-4 h-4 rounded-full ${isOpen ? colorMap['green'] : colorMap['red']}`}></div>
+      <div className={`w-4 h-4 rounded-full ${isOpen ? colorMap[color] : colorMap['red']}`}></div>
     </div>
   );
 };

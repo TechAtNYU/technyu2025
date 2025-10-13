@@ -1,5 +1,6 @@
+//ts
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -8,18 +9,18 @@ export const StickyScroll = ({
   content,
   contentClassName,
   containerClassName,
-  grad_bck = false
 }: {
   content: {
     title: string;
     description: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
   containerClassName?: string;
-  grad_bck?: boolean;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -42,24 +43,24 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = [
-    "#000000",
-    "#000000",
-    "#000000", 
-  ];
-  const linearGradients = [
-    "linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
-    "linear-gradient(to bottom right, #ec4899, #6366f1)", // pink-500 to indigo-500
-    "linear-gradient(to bottom right, #f97316, #eab308)", // orange-500 to yellow-500
-  ];
+  // const backgroundColors = [
+  //   "#000000",
+  //   "#000000",
+  //   "#000000", 
+  // ];
+  // const linearGradients = [
+  //   "linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
+  //   "linear-gradient(to bottom right, #ec4899, #6366f1)", // pink-500 to indigo-500
+  //   "linear-gradient(to bottom right, #f97316, #eab308)", // orange-500 to yellow-500
+  // ];
 
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0],
-  );
+  // const [backgroundGradient, setBackgroundGradient] = useState(
+  //   linearGradients[0],
+  // );
 
-  useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  // useEffect(() => {
+  //   setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+  // }, [activeCard]);
 
   return (
     <motion.div

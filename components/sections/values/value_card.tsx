@@ -3,8 +3,8 @@ import './style.css'
 import { ValueCardProps } from '@/lib/types'
 import Image from 'next/image'
 
-const ValueCard = ({ProgramDetail, variant}: {ProgramDetail: ValueCardProps, variant: string}) => {
-  const { name, url, svgicon, description } = ProgramDetail;
+const ValueCard = ({ValueDetail, variant}: {ValueDetail: ValueCardProps, variant: string}) => {
+  const { name, svgicon, description } = ValueDetail;
   return (
     <div className={`rectangle ${variant ? variant : ''}`}>
         {/* <div className={` w-full h-full`}> */}

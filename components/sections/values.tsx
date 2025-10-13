@@ -38,17 +38,17 @@ const Values = () => {
         {/* Parallax sticky cards */}
         <div className="sticky top-[20vh] w-full h-[90vh] mt-[10vh]">
           <div className="w-[80vw] h-[50vh] flex items-center justify-center text-3xl font-bold ml-[5vw]">
-            <ValueCard ProgramDetail={valuesData[0]} variant="purple"/>
+            <ValueCard ValueDetail={valuesData[0]} variant="purple"/>
           </div>
         </div>
         <div className="sticky top-[11vh] w-full h-screen flex items-center justify-center">
           <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
-            <ValueCard ProgramDetail={valuesData[1]} variant="green"/>
+            <ValueCard ValueDetail={valuesData[1]} variant="green"/>
           </div>
         </div>
         <div className="sticky top-[50vh] w-full flex items-start justify-start pb-[10vh]">
           <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
-            <ValueCard ProgramDetail={valuesData[2]} variant="purple"/>
+            <ValueCard ValueDetail={valuesData[2]} variant="purple"/>
           </div>
         </div>
       </div>

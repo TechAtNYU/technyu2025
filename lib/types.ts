@@ -20,7 +20,7 @@ export type TeamMember = {
 
 export type ValueCardProps = {
   name: string;
-  url: string;
   svgicon: string;
   description: string;
 };
+

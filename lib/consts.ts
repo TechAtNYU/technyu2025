@@ -232,19 +232,16 @@ export const team_members: TeamMember[] = [
 export const valuesData: ValueCardProps[] = [
     {
         name: "Community",
-        url: "#",
         svgicon: "/value-logos/community.svg",
         description: "Meet other tech-enthusiasts, builders, and curious minds."
     },
     {
         name: "Learning", 
-        url: "#",
         svgicon: "/value-logos/learning.svg",
         description: "Pick up new skills or brush up your code."
     },
     {
-        name: "Creativity",
-        url: "#", 
+        name: "Creativity", 
         svgicon: "/value-logos/creativity.svg",
         description: "Ideate and innovate your ideas through design and creative computing."
     }

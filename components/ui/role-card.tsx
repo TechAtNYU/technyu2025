@@ -82,7 +82,7 @@ const RoleCard: React.FC<RoleCardProps> = ({
       
       <ApplicationStatus isOpen={applicationsOpen} color={applicationsOpen ? "green" : "red"} />
       
-      {/* <div className='mt-4'>
+      <div className='mt-4'>
         {applicationsOpen ? (
           <button 
             className={`${colorMap[color].buttonOpen} text-white px-6 py-3 rounded-lg font-semibold transition-colors`}
@@ -91,14 +91,9 @@ const RoleCard: React.FC<RoleCardProps> = ({
             {buttonText}
           </button>
         ) : (
-          <button 
-            className={`${colorMap[color].buttonClosed} text-gray-300 px-6 py-3 rounded-lg font-semibold`} 
-            disabled
-          >
-            Applications Closed
-          </button>
+          <></>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };

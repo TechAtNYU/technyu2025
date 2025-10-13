@@ -18,7 +18,7 @@ export const blur: Variants = {
     }
 }
 
-export const translate = {
+export const translate: Variants = {
     initial: {
         y: "100%",
         opacity: 0

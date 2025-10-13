@@ -1,10 +1,10 @@
 'use client'
 import styles from './style.module.css'
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 export function MaskText({phrases, style, customDelay  = 0, duration = 0.75, newLine=false}:{phrases: string[], style?:string, customDelay?: number, duration?: number, newLine?: boolean}) {
 
-    const animation = {
+    const animation: Variants = {
       initial: {y: "100%"},
       enter: (i: number) => ({y: "0", transition: {duration: duration, ease: [0.65, 0, 0.35, 1],  delay: 0.075 * i  + customDelay}})
     }
