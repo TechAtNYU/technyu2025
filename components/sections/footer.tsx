@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <section className='w-full bg-[#191919] px-4 py-6 flex flex-col text-[#FFFFFF]'>
+    <section className='w-full bg-[#191919] px-[2.5vw] pt-8 pb-12 flex flex-col text-[#FFFFFF]'>
         <div className='w-full flex justify-between md:flex-row flex-col md:gap-0 gap-4'>
             <div className="relative w-40 h-12 md:w-60 md:h-20 flex-shrink-0">
                 <Image src="/logo.svg" alt="Technyu Logo" fill style={{objectFit: 'contain'}} priority />
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className='w-full mt-4 pt-3 flex flex-col'>
             <p className='text-xs md:text-sm text-gray-300'>© 2025 Tech@NYU. All rights reserved.</p>
-            <p className='text-xs md:text-sm text-gray-400 mt-1'>Made by Jennifer Huang and Sean Lai 2025.</p>
+            <p className='text-xs md:text-sm text-gray-400 mt-2'>Made by Jennifer Huang and Sean Lai 2025.</p>
         </div>
     </section>
   )

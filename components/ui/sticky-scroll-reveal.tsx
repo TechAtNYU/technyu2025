@@ -22,10 +22,8 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // Use the main page scroll instead of container scroll
     target: ref,
-    // container: ref,
-    offset: ["start start", "end start"],
+    offset: ["start center", "end center"], // Changed to trigger when sections hit center of viewport
   });
   const cardLength = content.length;
 
@@ -65,16 +63,13 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      // animate={{
-      //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      // }}
-      className={`flex justify-center md:space-x-10 rounded-md p-10 py-0 px-[5vw] ${containerClassName ? containerClassName : 'min-h-[200vh]'}`}
+      className={`flex justify-center md:space-x-10 rounded-md p-10 py-0 px-[5vw] ${containerClassName ? containerClassName : 'min-h-[100vh]'}`}
       ref={ref}
     >
       <div className="div relative flex items-start">
         <div className="w-full lg:w-[50vw]">
           {content.map((item, index) => (
-            <div key={item.title + index} className={`${index === 0 ? ' my-20 md:mb-40' : 'my-20 md:my-40'} ${index == content.length - 1 ? 'pb-[20vh]' : 'min-h-[30vh]'}`}>
+            <div key={item.title + index} className={`${index === 0 ? ' my-20 md:my-40' : 'mt-20 md:mt-40'} ${index == content.length - 1 ? 'pb-[20vh]' : 'min-h-[30vh]'}`}>
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -111,7 +106,7 @@ export const StickyScroll = ({
       <motion.div
         
         className={cn(
-          "sticky top-[20vh] hidden h-[40vh] mt-[10vh] w-[50vw] overflow-hidden md:block",
+          "sticky top-[60vh] hidden h-[30vh] -translate-y-1/2 mt-[25vh] w-[50vw] overflow-hidden md:block",
           contentClassName,
         )}
       >

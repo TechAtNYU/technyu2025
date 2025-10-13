@@ -53,7 +53,7 @@ const Page = () => {
           content={[{
             title: "Buildathon (A 48hr Hiring Hackathon)",
             description: "Join us for a thrilling 48-hour hackathon where you'll team up with fellow innovators to create groundbreaking solutions. Whether you're a coder, designer, or business strategist, this is your chance to shine and potentially get hired by top startups!",
-            content: <Image src="/event-pics/buildathon.jpg" alt="buildathon" fill className='object-contain w-full h-full' />
+            content: <Image src="/event-pics/buildathon.jpg" alt="buildathon" fill className='object-contain h-full ' />
           }, {
             title: "Keynote",
             description: "Hear from the top minds in the NYC ecosystem, featuring previous 30u30, unicorn founders, and more!",
