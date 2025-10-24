@@ -15,6 +15,8 @@ export const StickyScroll = ({
     description: string;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     content?: React.ReactNode | any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    mobileContent?: React.ReactNode | any;
   }[];
   contentClassName?: string;
   containerClassName?: string;
@@ -94,10 +96,10 @@ export const StickyScroll = ({
                 {item.description}
               </motion.p>
               {/* Mobile content display */}
-              {item.content && (
+              {item.mobileContent && (
                 <div className="mt-8 md:hidden w-full rounded-lg overflow-hidden">
-                  {item.content}
-                </div>
+                  {item.mobileContent}
+                </div> 
               )}
             </div>
           ))}
@@ -107,7 +109,7 @@ export const StickyScroll = ({
       <motion.div
         
         className={cn(
-          "sticky top-[60vh] hidden h-[30vh] -translate-y-1/2 mt-[25vh] w-[50vw] overflow-hidden md:block",
+          "sticky top-[60vh] hidden h-[30vh] -translate-y-1/2 mt-[30vh] w-[50vw] overflow-hidden sm:block",
           contentClassName,
         )}
       >

@@ -76,7 +76,7 @@ export const team_members: TeamMember[] = [
         title: "President",
         category: "Leadership",
         imageUrl: "/team_pics/liz-kim.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/yeonjukim/",
+        linkedinUrl: "https://www.linkedin.com/in/yeonjuk/",
         slug: "liz-kim"
     },
     {
@@ -84,7 +84,7 @@ export const team_members: TeamMember[] = [
         title: "Vice President",
         category: "Leadership",
         imageUrl: "/team_pics/sean-lai.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/seanlai/",
+        linkedinUrl: "https://www.linkedin.com/in/sean-sh-lai/",
         slug: "sean-lai"
     },
     {
@@ -92,7 +92,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Dev Team",
         category: "Program Leads",
         imageUrl: "/team_pics/cyan-yan.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/cyan-yan-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/chenxin-yan/",
         slug: "cyan-yan"
     },
     {
@@ -100,7 +100,7 @@ export const team_members: TeamMember[] = [
         title: "Vice President",
         category: "Leadership",
         imageUrl: "/team_pics/kevin-dong.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/kevin-dong-641b62194/",
+        linkedinUrl: "https://www.linkedin.com/in/kevinlindong/",
         slug: "kevin-dong"
     },
     {
@@ -108,7 +108,7 @@ export const team_members: TeamMember[] = [
         title: "Treasurer",
         category: "Leadership",
         imageUrl: "/team_pics/parul-veda.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/parulveda/",
+        linkedinUrl: "https://www.linkedin.com/in/parul-veda/",
         slug: "parul-veda"
     },
     {
@@ -116,7 +116,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Mentorship",
         category: "Program Leads",
         imageUrl: "/team_pics/aileen-li.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/aileen-li-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/aileenli1/",
         slug: "aileen-li"
     },
     {
@@ -124,7 +124,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Tech-treks",
         category: "Program Leads",
         imageUrl: "/team_pics/seth-derusha.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/sethderusha/",
+        linkedinUrl: "https://www.linkedin.com/in/seth-derusha/",
         slug: "seth-derusha"
     },
     {
@@ -132,7 +132,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Tech Treks",
         category: "Program Leads",
         imageUrl: "/team_pics/aimee-yu.jpeg",
-        linkedinUrl: "https://www.linkedin.com/in/aimeeyyu/",
+        linkedinUrl: "https://www.linkedin.com/in/aimee-yu-451769188/",
         slug: "aimee-yu"
     },
     {
@@ -140,7 +140,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Startup Team",
         category: "Program Leads",
         imageUrl: "/team_pics/nicole-wu.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/nicolewu/",
+        linkedinUrl: "https://www.linkedin.com/in/the-nicole-wu/",
         slug: "nicole-wu"
     },
     {
@@ -148,7 +148,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Dev Team",
         category: "Program Leads",
         imageUrl: "/team_pics/andy-li.png",
-        linkedinUrl: "https://www.linkedin.com/in/andy-li/",
+        linkedinUrl: "https://www.linkedin.com/in/andy-li-5b149a269/",
         slug: "andy-li"
     },
     {
@@ -156,7 +156,7 @@ export const team_members: TeamMember[] = [
         title: "Events Coordinator",
         category: "Operations",
         imageUrl: "/team_pics/kaylee-chen.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/kaylee-chen-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/kmc100/",
         slug: "kaylee-chen"
     },
     {
@@ -164,7 +164,7 @@ export const team_members: TeamMember[] = [
         title: "Operations, Marketing",
         category: "Operations",
         imageUrl: "/team_pics/haley-ngai.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/haley-ngai-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/haley-ngai/",
         slug: "haley-ngai"
     },
     {
@@ -172,7 +172,7 @@ export const team_members: TeamMember[] = [
         title: "Creative Director",
         category: "Operations",
         imageUrl: "/team_pics/jennifer-huang.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/jennifer-huang-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/jennifer-huang-30a8b3246/",
         slug: "jennifer-huang",
         fadeIn: "/team_pics/jenn-huang.jpg"
     },
@@ -181,7 +181,7 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Mentorship",
         category: "Program Leads",
         imageUrl: "/team_pics/bryan-ko.png",
-        linkedinUrl: "https://www.linkedin.com/in/bryan-ko-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/bryan-ko7/",
         slug: "bryan-ko"
     },
     {
@@ -189,7 +189,7 @@ export const team_members: TeamMember[] = [
         title: "Events Coordinator",
         category: "Operations",
         imageUrl: "/team_pics/yoonchul-shin.png",
-        linkedinUrl: "https://www.linkedin.com/in/yoonchul-shin-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/yoonchulshin/",
         slug: "yoonchul-shin"
     },
     {
@@ -197,7 +197,7 @@ export const team_members: TeamMember[] = [
         title: "Marketing Director",
         category: "Operations",
         imageUrl: "/team_pics/ellie-ho.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/ellie-ho-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/elaineho-/",
         slug: "ellie-ho"
     },
     {
@@ -205,7 +205,7 @@ export const team_members: TeamMember[] = [
     title: "Marketing Director (Abroad)",
     category: "Operations",
     imageUrl: "/team_pics/marc-lam.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/marclam/",
+    linkedinUrl: "https://www.linkedin.com/in/marc-andre-lam-747ba4291/",
     slug: "marc-lam"
     },
     {
@@ -213,12 +213,12 @@ export const team_members: TeamMember[] = [
         title: "Eboard, Startup Week",
         category: "Program Leads",
         imageUrl: "/team_pics/grace-gao.jpg",
-        linkedinUrl: "https://www.linkedin.com/in/grace-gao-9b0b621b4/",
+        linkedinUrl: "https://www.linkedin.com/in/gracegao10/",
         slug: "grace-gao"
     },
     {
         name: "Vivek Patel",
-        title: "Founder, President Emeritus",
+        title: "CTO @ Check, Former President",
         category: "Emeritus",
         imageUrl: "/team_pics/vivek-patel.png",
         linkedinUrl: "https://www.linkedin.com/in/vivek-patel-827b958b/",
@@ -228,7 +228,7 @@ export const team_members: TeamMember[] = [
         title: "Type Capital Founder, Former President",
         category: "Emeritus",
         imageUrl: "/team_pics/terri-burns.png",
-        linkedinUrl: "https://www.linkedin.com/in/terri-burns-927b4b1b/",
+        linkedinUrl: "https://www.linkedin.com/in/tcburning/",
         slug: "terri-burns"
     }
 ]

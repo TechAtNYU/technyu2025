@@ -17,7 +17,7 @@ const Page = () => {
                 <div className='lg:max-w-[60vw]'>
                 <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Mentorship</h1>
                   <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
-                    Looking for help in getting better as a developer? Look no further than Tech@NYU&apos;s Dev Team Mentorship Program!
+                    Looking for help in getting better as a developer? Look no further than Tech@NYU&apos;s Mentorship Program!
                   </p>
                   <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
                     Each pairing is unique. Your goals, your time, matched to an industry expert who suits your needs.

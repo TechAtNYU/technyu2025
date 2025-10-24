@@ -4,15 +4,34 @@ import { MaskText } from '../inlinemask/inline-mask';
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    // Auto-play video when component mounts
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log("Video autoplay failed:", error);
-        // Many browsers require user interaction before video can play
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   const video = videoRef.current;
+    
+  //   // Auto-play video when component mounts
+  //   if (video) {
+  //     video.play().catch(error => {
+  //       console.log("Video autoplay failed:", error);
+  //       // Many browsers require user interaction before video can play
+  //     });
+
+  //     video.addEventListener('timeupdate', () => {
+  //     if (video.currentTime >= video.duration - 0.05) {
+  //         video.pause();
+  //         video.currentTime = video.duration - 0.05;
+  //       }
+  //     });
+
+  //     // Cleanup
+  //     return () => {
+  //       video.removeEventListener('timeupdate', () => {
+  //         if (video.currentTime >= video.duration - 0.05) {
+  //           video.pause();
+  //           video.currentTime = video.duration - 0.05;
+  //         }
+  //       });
+  //     };
+  //   }
+  // }, []);
 
   return (
     <section className="relative w-full h-screen overflow-hidden aspect-video">
@@ -23,6 +42,7 @@ const Hero = () => {
         autoPlay
         muted
         playsInline
+        poster={'/images/hero-pic.jpg'}
       >
         <source src="/video/hero.mp4" type="video/mp4" />
       </video>
@@ -31,7 +51,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
       
       {/* Bottom-right aligned content with padding */}
-      <div className="relative z-1 flex flex-col items-start justify-end w-full h-full text-white p-5 md:p-10 lg:p-12">
+      <div className="relative z-1 flex flex-col items-start justify-end w-full h-full text-white p-5 md:p-10 lg:py-12 lg:px-[5vw]">
         <div className="max-w-xl sm:max-w-3xl lg:max-w-5xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[4vw] font-bold mb-3 text-left font-satoshi z-[10]">
             <MaskText 
