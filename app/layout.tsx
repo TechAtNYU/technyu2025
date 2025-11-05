@@ -15,9 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${satoshi.variable} antialiased bg-[#000000]`}
+        className={`${satoshi.variable} antialiased bg-[#000000] dark:bg-[#000000] scheme-only-dark`}
       >
           <Navbar />
           {children}

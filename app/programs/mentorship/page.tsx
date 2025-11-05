@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion"
 const Page = () => {
   return (
-      <div className='min-h-screen pt-[6rem] md:pt-[12rem]'>
+      <div className='min-h-screen pt-[6rem] md:pt-[12rem] bg-[#000000]'>
         <section id='about-sw' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw]'>
                 <div className='lg:max-w-[60vw]'>
                 <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Mentorship</h1>
