@@ -15,7 +15,7 @@ interface LogoSliderProps {
 
 const LogoSlider = ({ logos, speed = 30, className = '' }: LogoSliderProps) => {
   return (
-    <div className={`overflow-hidden py-8 border-t-2 border-b-2 w-screen ${className}`}
+    <div className={`overflow-hidden py-8 border-t-2 border-b-2 w-[100svw] ${className}`}
     style={{ boxShadow: 'inset 0px 0px 100px rgba(179, 0, 255, 0.4)' }}>
       <div className="relative flex">
         {/* First set of logos */}

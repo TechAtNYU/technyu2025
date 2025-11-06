@@ -34,11 +34,11 @@ const Hero = () => {
   // }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden aspect-video">
+    <section className="relative w-[100svw] h-screen overflow-hidden aspect-video">
       {/* Full screen video */}
       <video 
         ref={videoRef}
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         playsInline
         autoPlay
         muted
@@ -47,25 +47,23 @@ const Hero = () => {
       </video>
       
       {/* Dark overlay to make text more readable */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+      <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
       
       {/* Bottom-right aligned content with padding */}
       <div className="relative z-1 flex flex-col items-start justify-end w-full h-full text-white p-5 md:p-10 lg:py-12 lg:px-[5vw]">
         <div className="max-w-xl sm:max-w-3xl lg:max-w-5xl">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[4vw] font-bold mb-3 text-left font-satoshi z-[10]">
+          <h1 className="text-[15vw] tracking-tight sm:text-3xl md:text-4xl lg:text-[4vw] font-bold md:mb-3 mb-[1.5vh] text-left font-satoshi z-[10]">
             <MaskText 
-              phrases={['Tech@nyu']} 
+              phrases={['tech@nyu']} 
               customDelay={0.75} 
               duration={1.5}
-              style='className="text-2xl sm:text-3xl md:text-4xl lg:text-[4vw] font-bold mb-3 text-left font-satoshi z-[10]'
             />
           </h1>
-          <div className="text-sm sm:text-base md:text-lg lg:text-[2vw] text-left font-satoshi">
+          <div className="text-2xl sm:text-base md:text-xl lg:text-[2.5vw] text-left font-satoshi tracking-tight">
             <MaskText 
               phrases={['The Space for Artists, Makers, and Hackers to Build @ NYU.']} 
               customDelay={0.75} 
               duration={1.5}
-              style='className="text-sm sm:text-base md:text-xl lg:text-[2.5vw] text-left font-satoshi tracking-tight'
             />
           </div>
         </div>

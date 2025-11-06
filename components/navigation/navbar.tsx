@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   return (
     <motion.div 
-      className='fixed w-full z-[30]'
+      className='fixed w-[100svw] z-[30]'
       initial={{ opacity: isRootRoute ? 0 : 1 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.75, ease:[0.65, 0, 0.35, 1] }}

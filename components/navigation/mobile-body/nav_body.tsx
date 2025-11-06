@@ -38,7 +38,7 @@ export default function Body({ links, selectedLink, setSelectedLink, setIsActive
     };
 
     return (
-        <div className={`${styles.body} h-full w-screen flex pt-0 z-[50]`}>
+        <div className={`${styles.body} h-full w-[100svw] flex pt-0 z-[50]`}>
             <div className='flex w-full justify-center relative font-bold px-[10px]'>
                 <div className='outline outline-white rounded-3xl w-[90%] md:w-[85svw] min-h-24 p-5 text-lg bg-black mt-5 mb-5 flex flex-col text-white'>
                     {links.map((link, index) => {

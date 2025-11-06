@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${satoshi.variable} w-screen overflow-x-clip antialiased bg-[#000000] dark:bg-[#000000] scheme-only-dark`}
+        className={`${satoshi.variable} w-[100svw] overflow-x-clip antialiased bg-[#000000] dark:bg-[#000000] scheme-only-dark`}
       >
           <Navbar />
           {children}

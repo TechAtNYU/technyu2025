@@ -15,11 +15,11 @@ export function MaskText({phrases, style, customDelay  = 0, duration = 0.75, new
     });
   
     return(
-      <div ref={ref} className={`${style} h-fit`}>
+      <div ref={ref} className={` h-fit`}>
         {
           phrases.map( (phrase, index) => {
             return <div key={index} className={styles.lineMask}>
-              <motion.p custom={index} variants={animation} initial="initial" animate={inView ? "enter" : ""}>{phrase}</motion.p>
+              <motion.p custom={index} variants={animation} initial="initial" className={style} animate={inView ? "enter" : ""}>{phrase}</motion.p>
               {newLine && <><br /><br /></>}
             </div>
           })
