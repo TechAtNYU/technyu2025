@@ -45,21 +45,25 @@ const Page = () => {
           content={[{
             title: "Apply",
             description: "Help us understand your experiences, your background, and what you hope an industry mentor can help in your journey. From there you'll interview with our mentorship leads to determine a fit to a mentor. We'll then match you with a mentor based on your goals and interests.",
-            content: <Image src="/event-pics/mentorship1.jpg" alt="buildathon" fill className='object-contain w-full h-full' />
+            content: <Image src="/event-pics/mentorship1.jpg" alt="buildathon" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="/event-pics/mentorship1.jpg" alt="buildathon" fill className='object-cover rounded-lg' /></div>
           }, {
             title: "Kickoff",
             description: "Now that you're matched, it's time to meet your mentor! In this initial meeting, you'll get to know each other, discuss your goals, and set expectations for the mentorship journey ahead. Coordinate your meetings, and set a regular cadence that works for both of you.",
-            content: <Image src="/event-pics/mentorship2.jpg" alt="keynote" fill className='object-contain w-full h-full' />
+            content: <Image src="/event-pics/mentorship2.jpg" alt="keynote" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="/event-pics/mentorship2.jpg" alt="keynote" fill className='object-cover rounded-lg' /></div>
           },
           {
             title: "Working Together",
             description: "The heart of the mentorship program. Work with your mentor to set goals, seek advice, and get feedback on your projects. Whether it's technical skills, career guidance, or personal development, your mentor is there to support you.",
-            content: <Image src="/event-pics/mentorship3.jpg" alt="panel" fill className='object-contain w-full h-full' />
-          }, 
+            content: <Image src="/event-pics/mentorship3.jpg" alt="panel" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="/event-pics/mentorship3.jpg" alt="panel" fill className='object-cover rounded-lg' /></div>
+          },
           {
             title: "Celebrate!",
             description: "We wrap up the program with a celebration event where you can share your experiences, network with other mentees and mentors, and reflect on your growth. It's a time to celebrate your achievements and the connections you've made.",
-            content: <Image src="/event-pics/mentorship4.jpg" alt="workshop" fill className='object-contain w-full h-full' />
+            content: <Image src="/event-pics/mentorship4.jpg" alt="workshop" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="/event-pics/mentorship4.jpg" alt="workshop" fill className='object-cover rounded-lg' /></div>
           }
         
         ]}
