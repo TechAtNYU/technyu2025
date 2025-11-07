@@ -35,21 +35,25 @@ const Page = () => {
           content={[{
             title: "Building",
             description: "Start an intense sprint working with designers and engineers to turn mocks into an MVP. Collaborate together to acquire users and ship fast.",
-            content: <Image src="/event-pics/buildathon.jpg" alt="buildathon" fill className='object-contain w-full h-full' />
+            content: <Image src="./event-pics/buildathon.jpg" alt="buildathon" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="./event-pics/buildathon.jpg" alt="buildathon" fill className='object-cover rounded-lg' /></div>
           }, {
             title: "Iteration",
             description: "As you acquire users, learn how to iterate quick, respond, and add features to support a growing userbase leveraging Tech@NYU's network.",
-            content: <Image src="/event-pics/devteam2.jpg" alt="keynote" fill className='object-contain w-full h-full' />
+            content: <Image src="/event-pics/devteam2.jpg" alt="keynote" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="./event-pics/devteam2.jpg" alt="keynote" fill className='object-cover rounded-lg' /></div>
           },
           {
             title: "Showcase",
             description: "Finally show off to a panel of technical founders and experts, with the repository becoming opensource for your portfolio.",
-            content: <Image src="/event-pics/devteam3.jpg" alt="panel" fill className='object-contain w-full h-full' />
+            content: <Image src="./event-pics/devteam3.jpg" alt="panel" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="./event-pics/devteam3.jpg" alt="panel" fill className='object-cover rounded-lg' /></div>
           }, 
           {
             title: "Workshops",
             description: "Internal workshops hosted by the club to help upskill. Workshops have covered RAG, MCP, Agentic Frameworks, Post training, Database sharding and optimizations, and more!",
-            content: <Image src="/event-pics/panel.jpg" alt="workshop" fill className='object-contain w-full h-full' />
+            content: <Image src="./event-pics/panel.jpg" alt="workshop" fill className='object-contain w-full h-full' />,
+            mobileContent: <div className="relative w-full h-[300px]"><Image src="./event-pics/panel.jpg" alt="workshop" fill className='object-cover rounded-lg' /></div>
           }
         
         ]}

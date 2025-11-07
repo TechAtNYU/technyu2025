@@ -66,7 +66,7 @@ const LogoSlider = ({ logos, speed = 30, className = '' }: LogoSliderProps) => {
                 height={logo.height || 60}
                 className="object-contain max-w-full max-h-full"
                 unoptimized
-                priority
+                loading="lazy"
               />
             </div>
           ))}
