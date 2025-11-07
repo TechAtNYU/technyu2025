@@ -40,6 +40,7 @@ const LogoSlider = ({ logos, speed = 30, className = '' }: LogoSliderProps) => {
                 className="object-contain max-w-full max-h-full"
                 unoptimized
                 priority={index < 5}
+                loading='eager'
               />
             </div>
           ))}

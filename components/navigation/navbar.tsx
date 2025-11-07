@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className='outline outline-white rounded-xl lg:rounded-3xl w-[90svw] md:w-[85svw] lg:w-[95svw] h-16 md:min-h-24 p-5 px-3 md:px-10 text-lg bg-black mt-2 md:mt-10 flex z-[100]'>
                 <div className='w-full h-full flex justify-between items-center'>
                     <Link href="/">
-                        <Image src="/logo.svg" alt="tech@nyu logo" width={1000} height={250} className='object-contain w-[120px] h-[30px] md:w-[200px] md:h-[50px] mt-1'/>
+                        <Image src="/logo.svg" alt="tech@nyu logo" width={1000} height={250} className='object-contain w-[120px] h-[30px] md:w-[200px] md:h-[50px] mt-1' priority unoptimized/>
                     </Link>
                     <div className='gap-5 md:gap-10 text-xl lg:text-2xl hidden md:flex text-center'>
                         <Link href="/team" className='text-white hover:underline '>Team</Link>

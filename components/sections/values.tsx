@@ -36,18 +36,18 @@ const Values = () => {
           OUR VALUES
         </h2>
         {/* Parallax sticky cards */}
-        <div className="sticky top-[20vh] w-full h-[90vh] mt-[10vh]">
-          <div className="w-[80vw] h-[50vh] flex items-center justify-center text-3xl font-bold ml-[5vw]">
+        <div className="sticky top-[20svh] w-full h-[90svh] mt-[10vh]">
+          <div className="w-[80vw] h-[50svh] flex items-center justify-center text-3xl font-bold ml-[5vw]">
             <ValueCard ValueDetail={valuesData[0]} variant="purple"/>
           </div>
         </div>
-        <div className="sticky top-[11vh] w-full h-screen flex items-center justify-center">
-          <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
+        <div className="sticky top-[11svh] w-full h-screen flex items-center justify-center">
+          <div className="w-[80vw] h-[50svh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
             <ValueCard ValueDetail={valuesData[1]} variant="green"/>
           </div>
         </div>
-        <div className="sticky top-[50vh] w-full flex items-start justify-start pb-[10vh]">
-          <div className="w-[80vw] h-[50vh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
+        <div className="sticky top-[50svh] w-full flex items-start justify-start pb-[10vh]">
+          <div className="w-[80vw] h-[50svh] rounded-2xl shadow-xl flex items-center justify-center text-3xl font-bold ml-[10vw]">
             <ValueCard ValueDetail={valuesData[2]} variant="purple"/>
           </div>
         </div>
