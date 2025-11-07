@@ -38,6 +38,8 @@ const LogoSlider = ({ logos, speed = 30, className = '' }: LogoSliderProps) => {
                 width={logo.width || 120}
                 height={logo.height || 60}
                 className="object-contain max-w-full max-h-full"
+                unoptimized
+                priority={index < 5}
               />
             </div>
           ))}
@@ -63,6 +65,8 @@ const LogoSlider = ({ logos, speed = 30, className = '' }: LogoSliderProps) => {
                 width={logo.width || 120}
                 height={logo.height || 60}
                 className="object-contain max-w-full max-h-full"
+                unoptimized
+                priority
               />
             </div>
           ))}
