@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -14,12 +14,54 @@ const Navbar = () => {
   const pathname = usePathname()
   const isRootRoute = pathname === '/'
   const [isActive, setIsActive] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout);
+      
+      scrollTimeout = setTimeout(() => {
+        const currentScrollY = window.scrollY;
+        const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+        
+        // Only trigger if scroll difference is significant (more than 5px)
+        if (scrollDifference < 5) return;
+        
+        // Show navbar when scrolling up, hide when scrolling down
+        if (currentScrollY < lastScrollY) {
+          setIsVisible(true);
+        } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // Only hide after scrolling down past 100px
+          setIsVisible(false);
+        }
+        
+        setLastScrollY(currentScrollY);
+      }, 100); // 50ms debounce
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, [lastScrollY]);
+
   return (
     <motion.div 
       className='fixed w-full z-[100]'
-      initial={{ opacity: isRootRoute ? 0 : 1 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.75, ease:[0.65, 0, 0.35, 1] }}
+      initial={{ opacity: isRootRoute ? 0 : 1, y: 0 }}
+      animate={{ 
+        opacity: 1,
+        y: isVisible ? 0 : -200
+      }}
+      transition={{ 
+        opacity: { duration: 1.5, delay: 0.75, ease:[0.65, 0, 0.35, 1] },
+        y: { duration: 0.7, ease: 'easeInOut' }
+      }}
       
     >
         <div className='flex w-full justify-center relative font-bold'>
