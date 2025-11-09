@@ -13,25 +13,30 @@ interface TimelineProps {
 
 export function Timeline({ events }: TimelineProps) {
   return (
-    <div className="space-y-8">
-      {events.map((event, index) => (
-        <div key={index} className="relative pl-8 pb-8 border-l-2 border-gray-800 last:border-transparent">
-          {/* Timeline dot */}
-          <div className="absolute left-[-5px] top-0 w-2 h-2 rounded-full bg-white" />
-          
-          {/* Content */}
-          <div className="space-y-2">
-            <p className="text-sm text-gray-500 font-medium">{event.year}</p>
-            <h3 className="text-xl font-bold text-white">{event.title}</h3>
-            {event.organization && (
-              <p className="text-base text-gray-400">{event.organization}</p>
-            )}
-            <p className="text-base text-gray-300 leading-relaxed">
-              {event.description}
-            </p>
+    <div className="relative">
+      {/* Continuous vertical line */}
+      <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gray-800" />
+      
+      <div className="space-y-8">
+        {events.map((event, index) => (
+          <div key={index} className="relative pl-8 pb-8">
+            {/* Timeline dot - aligned with year text */}
+            <div className="absolute left-[-3px] top-[6px] w-2 h-2 rounded-full bg-white" />
+            
+            {/* Content */}
+            <div className="space-y-2">
+              <p className="text-sm text-gray-500 font-medium">{event.year}</p>
+              <h3 className="text-xl font-bold text-white">{event.title}</h3>
+              {event.organization && (
+                <p className="text-base text-gray-400">{event.organization}</p>
+              )}
+              <p className="text-base text-gray-300 leading-relaxed">
+                {event.description}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
