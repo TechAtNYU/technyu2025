@@ -7,8 +7,8 @@ import { EboardBio } from '@/lib/types'
 import { Metadata } from 'next'
 import { client } from '@/lib/sanity/client'
 import { Separator } from '@radix-ui/react-dropdown-menu'
-import { TimelineNav } from '@/components/team_profiles/timeline-nav'
-import { Timeline } from '@/components/team_profiles/timeline'
+import { TimelineNav } from '@/components/eboard_bio/timeline-nav'
+import { Timeline } from '@/components/eboard_bio/timeline'
 interface PageProps {
   params: Promise<{
     slug: string
@@ -59,11 +59,11 @@ export default async function EboardBioPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Profile Section */}
-      <div className="container pt-24 md:pt-40 lg:pt-48">
+      <div className="container pt-24 md:pt-40 lg:pt-[20svh]">
           {/* Profile Container - Responsive Layout */}
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 w-screen px-[5svw]">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-10 w-screen px-[5svw]">
             {/* Left Column - Info */}
-            <div className="space-y-4 lg:space-y-2 order-2 lg:order-1 lg:w-[50svw]">
+            <div className="space-y-4 lg:space-y-2 order-2 lg:order-1 lg:w-[50svw] justify-between flex-col flex">
               {/* Badges - Display position and category */}
               <div className="flex flex-wrap lg:justify-between gap-3 lg:pb-4">
                 {bio.position && (
@@ -77,7 +77,7 @@ export default async function EboardBioPage({ params }: PageProps) {
                   </span>
                 )}
               </div>
-
+              <div>
               {/* Name */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight pt-10">
                 {bio.name}
@@ -98,32 +98,15 @@ export default async function EboardBioPage({ params }: PageProps) {
 
               {/* Short Description */}
               {bio.shortDescription && (
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed w-full">
                   {bio.shortDescription}
                 </p>
               )}
-
-              {/* Connect Section */}
-              {/* <div className="py-4">
-                <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">Connect</p>
-                <div className="flex gap-6">
-                  {bio.linkedinUrl && (
-                    <Link
-                      href={bio.linkedinUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-gray-400 transition-colors uppercase text-sm tracking-wide font-medium"
-                    >
-                      LinkedIn
-                    </Link>
-                  )}
-                 
-                </div>
-              </div> */}
+              </div>
             </div>
 
             {/* Right Column - Profile Image (bottom on mobile/tablet, right on large) */}
-            <div className="relative w-full lg:w-auto aspect-[4/5] lg:max-w-[30svw] overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 order-1 lg:order-2">
+            <div className="relative w-full lg:min-w-[30svw] aspect-[4/5] lg:max-w-[45svw] overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 order-1 lg:order-2">
               <Image
                 src={bio.profileImage.url}
                 alt={bio.profileImage.alt || bio.name}
@@ -140,7 +123,7 @@ export default async function EboardBioPage({ params }: PageProps) {
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className='w-screen absolute left-0 min-h-[15svh] bg-[#0a0a0a] z-5 flex justify-between flex-col'>
-            <div className="py-4 pt-12 w-full px-[5svw]">
+            <div className="py-4 pt-12 xl:pt-16 w-full px-[5svw]">
                 <div className="flex gap-6">
                   {bio.linkedinUrl && (
                     <Link

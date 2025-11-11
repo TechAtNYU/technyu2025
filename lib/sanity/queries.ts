@@ -35,13 +35,13 @@ const eboardBioQuery = `
     name,
     slug,
     shortDescription,
-    linkedinUrl,
     "profileImage": {
       "url": profileImage.asset->url,
       "alt": profileImage.alt
     },
     "position": *[_type == "teamMember" && slug.current == ^.slug][0].title,
     "category": *[_type == "teamMember" && slug.current == ^.slug][0].category,
+    "linkedinUrl": *[_type == "teamMember" && slug.current == ^.slug][0].linkedinUrl,
     timeline[]{
       year,
       title,

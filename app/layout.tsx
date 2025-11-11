@@ -7,6 +7,11 @@ import Footer from "@/components/sections/footer";
 export const metadata: Metadata = {
   title: "Tech@NYU",
   description: "The place for hackers, builders, and designers to create @ NYU",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
