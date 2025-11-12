@@ -9,7 +9,7 @@ const Page = () => {
   const applicationsOpen = false;
 
   return (
-    <div className='min-h-screen pt-[12rem] px-[5vw]'>
+    <div className='min-h-screen pt-[20svh] px-[5vw]'>
       <AboutSection />
       <RolesSelection applicationsOpen={applicationsOpen} />
       {/* <section id='some photos'>

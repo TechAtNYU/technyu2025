@@ -109,7 +109,7 @@ export const StickyScroll = ({
       <motion.div
         
         className={cn(
-          "sticky top-[60vh] hidden h-[30vh] -translate-y-1/2 mt-[30vh] w-[50vw] overflow-hidden sm:block",
+          "sticky top-[60vh] hidden h-[30vh] -translate-y-1/2 mt-[30vh] w-[50vw] overflow-hidden md:block",
           contentClassName,
         )}
       >

@@ -5,8 +5,8 @@ import { ApplicationStatus } from '@/components/ui/ApplicationStatus'
 import DevTeamRoles from '@/components/sections/dev-team-roles'
 const Page = () => {
   return (
-      <div className='min-h-screen pt-[12rem]'>
-        <section id='about-sw' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw]'>
+      <div className='pt-[5svh] md:pt-[20svh]'>
+        <section id='about-dt' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw] md:px-[10svw] lg:px-[5svw]'>
                 <div className='lg:max-w-[60vw] min-w-[40vw]'>
                   <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Dev Team</h1>
                     <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
