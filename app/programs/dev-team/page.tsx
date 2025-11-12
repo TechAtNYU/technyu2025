@@ -25,7 +25,7 @@ const Page = () => {
                     alt={`Dev Team`}
                     width={200}
                     height={200}
-                    className='object-contain w-full md:w-[40vw] h-fit lg:max-w-[35vw]'
+                    className='object-contain w-full md:w-[40vw] h-fit lg:max-w-[30vw]'
                   />
               </section>
         <section id='structure' className='mt-16'>

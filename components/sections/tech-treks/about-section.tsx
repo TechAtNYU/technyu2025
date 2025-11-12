@@ -4,7 +4,7 @@ import Image from 'next/image'
 const AboutSection = () => {
   return (
     <section id='about-tt' className='flex flex-col-reverse md:flex-row md:justify-between'>
-      <div className='lg:max-w-[60vw]'>
+      <div className='lg:max-w-[70vw] min-w-[40vw]'>
         <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Tech Treks</h1>
         <p className='text-white text-lg md:text-xl max-w-2xl'>
           Initially created to expose freshmen to the tech industry, we realized there were sophomores and juniors just as new to the industry. Tech Treks now has two participant types: members and tutors!
