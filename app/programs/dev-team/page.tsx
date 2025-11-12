@@ -7,25 +7,25 @@ const Page = () => {
   return (
       <div className='min-h-screen pt-[12rem]'>
         <section id='about-sw' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw]'>
-                <div className='lg:max-w-[60vw]'>
-                <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Dev Team</h1>
-                  <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
-                    Join a semesterly long sprint in shippping a product from 0 to 1. Learn, adapt, and grow like a startup catering to real users!
-                  </p>
-                  <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
-                    Whether you&apos;re a backend demon or a frontend wizard, there&apos;s a place for you on our team. If you can ship good quality code, we want you on this team!
-                  </p>
-                  <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
-                    Started in spring 2024, this program had alumni land FAANG, Jane St, startup internships, and launch their own design agency!
-                  </p>
-                   <ApplicationStatus isOpen={false} color="red" className='md:w-[16rem]'/>
+                <div className='lg:max-w-[60vw] min-w-[40vw]'>
+                  <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Dev Team</h1>
+                    <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
+                      Join a semesterly long sprint in shippping a product from 0 to 1. Learn, adapt, and grow like a startup catering to real users!
+                    </p>
+                    <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
+                      Whether you&apos;re a backend demon or a frontend wizard, there&apos;s a place for you on our team. If you can ship good quality code, we want you on this team!
+                    </p>
+                    <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
+                      Started in spring 2024, this program had alumni land FAANG, Jane St, startup internships, and launch their own design agency!
+                    </p>
+                    <ApplicationStatus isOpen={false} color="red" className='md:w-[16rem]'/>
                   </div>
                   <Image
                     src={`/program-logos/dev-team.svg`}
                     alt={`Dev Team`}
                     width={200}
                     height={200}
-                    className='object-contain w-full h-full lg:max-w-[30vw]'
+                    className='object-contain w-full md:w-[30vw] h-fit lg:max-w-[30vw]'
                   />
               </section>
         <section id='structure' className='mt-16'>

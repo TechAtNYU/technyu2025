@@ -19,7 +19,7 @@ const AboutSection = () => {
         alt={`Tech Treks`}
         width={200}
         height={200}
-        className='object-contain w-full h-full lg:max-w-[30vw]'
+        className='object-contain w-full h-full lg:max-w-[30vw] md:max-w-[40%] md:max-h-[40vh]'
       />
     </section>
   )

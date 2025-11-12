@@ -9,7 +9,7 @@ const Page = () => {
   return (
       <div className='min-h-screen pt-[12rem] bg-[#000000]'>
         <section id='about-sw' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw]'>
-                <div className='lg:max-w-[60vw]'>
+                <div className='lg:max-w-[60vw] min-w-[40vw]'>
                 <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Startup Week</h1>
                   <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
                     Join the committee that helps host, Startup Week! Startup Week is NYU&apos;s premier student run week-long event <b className='text-green-500'>held in the spring</b> that brings together students, entrepreneurs, and industry professionals to celebrate innovation and entrepreneurship. The event features a variety of activities, including workshops, panel discussions, networking events, and a 48-hour hackathon.

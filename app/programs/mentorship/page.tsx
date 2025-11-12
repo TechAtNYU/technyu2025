@@ -14,7 +14,7 @@ const Page = () => {
   return (
       <div className='min-h-screen pt-[6rem] md:pt-[12rem] bg-[#000000]'>
         <section id='about-sw' className='flex flex-col-reverse md:flex-row md:justify-between px-[5vw]'>
-                <div className='lg:max-w-[60vw]'>
+                <div className='lg:max-w-[60vw] min-w-[40vw]'>
                 <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Mentorship</h1>
                   <p className='text-white text-lg md:text-xl lg:text-2xl mb-6'>
                     Looking for help in getting better as a developer? Look no further than Tech@NYU&apos;s Mentorship Program!
@@ -33,7 +33,7 @@ const Page = () => {
                     alt={`Mentorship`}
                     width={200}
                     height={200}
-                    className='object-contain w-full h-full lg:max-w-[30vw]'
+                    className='object-contain w-full md:w-[30vw]  h-full lg:max-w-[30vw]'
                   />
               </section>
         <section id='process' className='mt-16'>
