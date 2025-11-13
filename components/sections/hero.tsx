@@ -24,7 +24,7 @@ const Hero = () => {
       // Trigger animation when 3 seconds remain
       const timeRemaining = video.duration - video.currentTime;
       
-      if (timeRemaining <= 23 && !hasAnimated) {
+      if (timeRemaining <= 22 && !hasAnimated) {
         hasAnimated = true;
         
         // Calculate responsive scale based on viewport width to match navbar proportions
@@ -79,7 +79,7 @@ const Hero = () => {
           muted
           preload="auto"
         >
-          <source src="/hero_2025.webm" type="video/webm" />
+          <source src="/hero_2025_fall.webm" type="video/webm" />
         </video>
         
         {/* Dark overlay to make text more readable */}
