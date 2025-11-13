@@ -4,6 +4,7 @@ import { MaskText } from '../inlinemask/inline-mask';
 import { MaskSVG } from '../inlinemask/inline-image-mask';
 import { gsap } from 'gsap';
 import CustomEase from 'gsap/CustomEase';
+import Logo from '@/components/assets/logo.svg'
 
 gsap.registerPlugin(CustomEase);
 
@@ -23,7 +24,7 @@ const Hero = () => {
       // Trigger animation when 3 seconds remain
       const timeRemaining = video.duration - video.currentTime;
       
-      if (timeRemaining <= 22 && !hasAnimated) {
+      if (timeRemaining <= 24 && !hasAnimated) {
         hasAnimated = true;
         
         // Calculate responsive scale based on viewport width to match navbar proportions
@@ -94,12 +95,8 @@ const Hero = () => {
                 duration={1.7}
                 className="w-[70svw] sm:w-[60svw] md:w-[55svw] lg:w-[30svw]"
               >
-                <Image 
-                  src="/logo.svg" 
+                <Logo 
                   alt="Tech@NYU" 
-                  width={200}
-                  height={50}
-                  priority
                   className="w-full h-auto"
                 />
               </MaskSVG>

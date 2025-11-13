@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 // When the time comes to build the program pages
@@ -9,6 +8,7 @@ import { programs } from '@/lib/consts'
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './style.module.css';
 import NavbarMobile from './navbar-mobile'
+import Logo from '@/components/assets/logo.svg'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -68,7 +68,7 @@ const Navbar = () => {
             <div className='outline outline-white rounded-xl lg:rounded-3xl w-[90svw] md:w-[85svw] lg:w-[95svw] h-16 md:min-h-24 p-5 px-3 md:px-10 text-lg bg-black mt-2 md:mt-10 z-[100]'>
                 <div className='w-full h-full flex justify-between items-center'>
                     <Link href="/">
-                        <Image src="/logo.svg" alt="tech@nyu logo" width={1000} height={250} className='object-contain w-[120px] h-[30px] md:w-[200px] md:h-[50px] mt-1' priority unoptimized/>
+                        <Logo className='object-contain w-[120px] h-[30px] md:w-[200px] md:h-[50px] mt-1' aria-label="tech@nyu logo" />
                     </Link>
                     <div className='gap-5 md:gap-10 text-xl lg:text-2xl hidden md:flex text-center'>
                         <Link href="/team" className='text-white hover:underline '>Team</Link>
