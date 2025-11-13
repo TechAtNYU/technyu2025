@@ -6,6 +6,8 @@ import { TeamMember } from '@/lib/types'
 import TeamFiltersDesktop from './team_filters_desktop'
 import TeamFiltersMobile from './team_filters_mobile'
 import { gsap } from 'gsap'
+import { useNavbar } from '@/contexts/NavbarContext'
+import { motion } from 'framer-motion'
 
 interface TeamGridProps {
   initialTeamMembers: TeamMember[]
@@ -16,6 +18,7 @@ const TeamGrid = ({ initialTeamMembers }: TeamGridProps) => {
   const [activeFilter, setActiveFilter] = useState("All")
   const [displayedFilter, setDisplayedFilter] = useState("All")
   const gridRef = useRef<HTMLDivElement>(null)
+  const { navbarActive } = useNavbar()
 
   // Extract unique categories from team members
   const categories = useMemo(() => {
@@ -82,7 +85,22 @@ const TeamGrid = ({ initialTeamMembers }: TeamGridProps) => {
   return (
     <div className='w-[100svw] h-fit flex flex-col items-center justify-center pb-[20svh]'>
       {/* Sticky Filter Section */}
-      <div className='sticky top-0 z-20 w-[100svw] flex justify-center border-b-2 border-white bg-black pt-24 md:pt-40'>
+      <motion.div 
+        className='sticky top-0 z-20 w-[100svw] flex justify-center border-b-2 border-white bg-black/95 backdrop-blur-sm'
+        initial={{
+          paddingTop: navbarActive ? 'var(--navbar-active-pt)' : '1.25rem'
+        }}
+        animate={{
+          paddingTop: navbarActive ? 'var(--navbar-active-pt)' : '1.25rem'
+        }}
+        transition={{
+          duration: 0.7,
+          ease: [0.65, 0, 0.35, 1],
+        }}
+        style={{
+          '--navbar-active-pt': 'clamp(6rem, 20svh, 10rem)'
+        } as React.CSSProperties}
+      >
         {/* Desktop Filter Section */}
         <TeamFiltersDesktop
           categories={categories}
@@ -100,7 +118,7 @@ const TeamGrid = ({ initialTeamMembers }: TeamGridProps) => {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
         />
-      </div>
+      </motion.div>
 
       {/* Team Grid */}
       <div 

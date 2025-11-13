@@ -1,54 +1,92 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-// When the time comes to build the program pages
 import NavigationDropdown from './navigation_dropdown'
 import { programs } from '@/lib/consts'
-import { AnimatePresence, motion } from 'framer-motion';
-import styles from './style.module.css';
+import { AnimatePresence, motion } from 'framer-motion'
+import styles from './style.module.css'
 import NavbarMobile from './navbar-mobile'
 import Logo from '@/components/assets/logo.svg'
+import { useNavbar } from '@/contexts/NavbarContext'
 
 const Navbar = () => {
   const pathname = usePathname()
   const isRootRoute = pathname === '/'
-  const [isActive, setIsActive] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isActive, setIsActive] = useState(false)
+  const { navbarActive, setNavbarActive } = useNavbar()
+
+  // Use refs to track scroll state without causing re-renders
+  const lastScrollY = useRef(0)
+  const scrollDirection = useRef<'up' | 'down' | null>(null)
+  const directionChangeY = useRef(0)
+  const ticking = useRef(false)
+  const hasScrolledPastThreshold = useRef(false)
 
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
+    const ACTIVE_THRESHOLD = 50 // Scroll position to activate navbar style
+    const DIRECTION_COMMIT_DISTANCE = 80 // Distance needed to commit direction change
+    const HIDE_THRESHOLD = 30 // Minimum scroll position to allow hiding
+
+    const updateNavbar = () => {
+      const currentScrollY = window.scrollY
+      const scrollDiff = currentScrollY - lastScrollY.current
+      
+      // Ignore tiny movements (reduces jitter)
+      if (Math.abs(scrollDiff) < 3) {
+        ticking.current = false
+        return
+      }
+
+      const newDirection = scrollDiff > 0 ? 'down' : 'up'
+      
+      // Detect direction change
+      if (newDirection !== scrollDirection.current) {
+        scrollDirection.current = newDirection
+        directionChangeY.current = currentScrollY
+      }
+
+      // Calculate distance traveled in current direction
+      const distanceInDirection = Math.abs(currentScrollY - directionChangeY.current)
+
+      // Handle navbar active state (once activated, stays active)
+      if (currentScrollY > ACTIVE_THRESHOLD) {
+        hasScrolledPastThreshold.current = true
+      }
+      
+      if (hasScrolledPastThreshold.current && !navbarActive) {
+        setNavbarActive(true)
+      }
+
+      // Update navbar visibility based on scroll direction commitment
+      if (distanceInDirection >= DIRECTION_COMMIT_DISTANCE) {
+        if (newDirection === 'up') {
+          setNavbarActive(true)
+        } else if (currentScrollY > HIDE_THRESHOLD) {
+          setNavbarActive(false)
+        }
+      }
+
+      lastScrollY.current = currentScrollY
+      ticking.current = false
+    }
 
     const handleScroll = () => {
-      clearTimeout(scrollTimeout);
-      
-      scrollTimeout = setTimeout(() => {
-        const currentScrollY = window.scrollY;
-        const scrollDifference = Math.abs(currentScrollY - lastScrollY);
-        
-        // Only trigger if scroll difference is significant (more than 5px)
-        if (scrollDifference < 5) return;
-        
-        // Show navbar when scrolling up, hide when scrolling down
-        if (currentScrollY < lastScrollY) {
-          setIsVisible(true);
-        } else if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          // Only hide after scrolling down past 100px
-          setIsVisible(false);
-        }
-        
-        setLastScrollY(currentScrollY);
-      }, 50); // 50ms debounce
-    };
+      if (!ticking.current) {
+        window.requestAnimationFrame(updateNavbar)
+        ticking.current = true
+      }
+    }
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initialize
+    lastScrollY.current = window.scrollY
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout);
-    };
-  }, [lastScrollY]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [navbarActive, setNavbarActive])
 
   return (
     <motion.div 
@@ -56,25 +94,23 @@ const Navbar = () => {
       initial={{ opacity: isRootRoute ? 0 : 1 }}
       animate={{ 
         opacity: 1,
-        translateY: isVisible ? 0 : -200
+        translateY: navbarActive ? 0 : -200
       }}
       transition={{ 
         opacity: { duration: 1.5, delay: 0.75, ease:[0.65, 0, 0.35, 1] },
         translateY: { duration: 0.7, ease: 'easeInOut' }
       }}
-      
+      data-navbar-active={navbarActive}
     >
         <div className='flex w-full justify-center relative font-bold'>
-            <div className='outline outline-white rounded-xl lg:rounded-3xl w-[90svw] md:w-[85svw] lg:w-[95svw] h-16 md:min-h-24 p-5 px-3 md:px-10 text-lg bg-black mt-2 md:mt-10 z-[100]'>
+            <div className={`outline outline-white rounded-xl lg:rounded-3xl w-[90svw] md:w-[85svw] lg:w-[95svw] h-16 md:min-h-24 p-5 px-3 md:px-10 text-lg bg-black mt-2 md:mt-10 z-[100] ${navbarActive ? 'navbar-scrolled' : ''}`}>
                 <div className='w-full h-full flex justify-between items-center'>
                     <Link href="/">
                         <Logo className='object-contain w-[120px] h-[30px] md:w-[200px] md:h-[50px] mt-1' aria-label="tech@nyu logo" />
                     </Link>
                     <div className='gap-5 md:gap-10 text-xl lg:text-2xl hidden md:flex text-center'>
                         <Link href="/team" className='text-white hover:underline '>Team</Link>
-                        {/* <Link href="/about" className='text-white hover:underline'>About</Link> */}
                         <NavigationDropdown name="Programs" items={programs.map(prog => ({ name: prog.name, href: prog.href }))} />
-                        {/* For future patch */}
                         <Link href="mailto:hello@techatnyu.org" className='text-white hover:underline'>Contact</Link>
                     </div>
                     <div className='md:hidden flex items-center justify-center gap-2 text-white text-sm' onClick={() => setIsActive(!isActive)}>
@@ -109,12 +145,10 @@ const opacity = {
     initial: {
         opacity: 0
     },
-
     open: {
         opacity: 1,
         transition: {duration: 0.5}
     },
-
     closed: {
         opacity: 0,
         transition: {duration: 0.5}

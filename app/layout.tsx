@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navigation/navbar";
+import { NavbarProvider } from '@/contexts/NavbarContext'
 import { satoshi } from "@/lib/fonts";
 import Footer from "@/components/sections/footer";
 
@@ -24,11 +25,13 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} w-[100svw] overflow-x-clip antialiased bg-[#000000] dark:bg-[#000000] scheme-only-dark`}
       >
+        <NavbarProvider>
           <Navbar />
           <main>
-          {children}
+            {children}
           </main>
           <Footer />
+        </NavbarProvider>
       </body>
     </html>
   );
