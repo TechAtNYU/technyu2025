@@ -6,13 +6,17 @@ const AboutSection = () => {
     <section id='about-tt' className='flex flex-col-reverse md:flex-row md:justify-between'>
       <div className='lg:max-w-[70vw] min-w-[40vw]'>
         <h1 className='text-white text-4xl md:text-5xl lg:text-6xl font-bold text-left pb-10'>Tech Treks</h1>
-        <p className='text-white text-lg md:text-xl max-w-2xl'>
-          Initially created to expose freshmen to the tech industry, we realized there were sophomores and juniors just as new to the industry. Tech Treks now has two participant types: members and tutors!
-
-          Members: You will be a part of a 12-15 person semesterly cohort that meets every week on Tuesdays and Fridays. You will meet other students who are beginning their journeys in tech, connect with industry professionals, learn from workshops, and add fun software projects to your portfolio!
-
-          Tutors: You will aid the members in building their projects by offering your expertise on Tuesdays, with optional additional office hours. In return, you will get all the perks that regular members get!
+        <div className='text-white text-lg md:text-xl max-w-2xl space-y-4'>
+        <p>
+          Initially created to expose freshmen to the tech industry, we realized there were sophomores and juniors just as new to the field. Tech Treks now has two participant types: members and tutors!
         </p>
+        <p>
+          Members: You will be part of a 12–15 person semesterly cohort that meets twice a week. You’ll work with a small group of 3–4 peers to build a full-stack project for your portfolio over the course of the semester. The program also includes social events, weekly workshops on specific topics, access to leads and tutors with industry experience, and office tours throughout the semester.
+        </p>
+        <p>
+          Tutors: You will aid members in building their projects by offering your expertise during one of our two weekly meetings. In return, you’ll get all the same perks that regular members receive!
+        </p>
+        </div>
       </div>
       <Image
         src={`/program-logos/tech-treks.svg`}
