@@ -9,6 +9,7 @@ import { client } from '@/lib/sanity/client'
 import { Separator } from '@radix-ui/react-dropdown-menu'
 import { TimelineNav } from '@/components/eboard_bio/timeline-nav'
 import { Timeline } from '@/components/eboard_bio/timeline'
+import ResponsiveMedia from '@/components/ui/ResponsiveMedia'
 interface PageProps {
   params: Promise<{
     slug: string
@@ -192,13 +193,8 @@ export default async function EboardBioPage({ params }: PageProps) {
                         
                         {/* Optional Media */}
                         {item.media?.url && (
-                          <div className="relative w-full max-w-3xl h-64 md:h-96 rounded-lg overflow-hidden mt-8">
-                            <Image
-                              src={item.media.url}
-                              alt={item.media.alt || item.question}
-                              fill
-                              className="object-cover"
-                            />
+                          <div className="w-full mt-8">
+                            <ResponsiveMedia src={item.media.url} alt={item.media.alt || item.question} />
                           </div>
                         )}
                       </div>
